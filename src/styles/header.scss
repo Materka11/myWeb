@@ -1,0 +1,44 @@
+@import './variables.scss';
+
+.header {
+	width: 100vw;
+	height: 100vh;
+	background-color: $primary-purple;
+
+	nav {
+		height: 100px;
+		position: relative;
+
+		img {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+		}
+
+		hr {
+			position: absolute;
+			transform: rotate(90deg);
+			top: 40px;
+			color: $primary-green;
+			width: 47px;
+			left: 120px;
+		}
+
+		span,
+		a {
+			color: $primary-green;
+			font-weight: bold;
+			position: absolute;
+			font-size: .75rem;
+			top: 42px;
+		}
+
+		span {
+			left: 165px;
+		}
+
+		a {
+			right: 35px;
+		}
+	}
+}

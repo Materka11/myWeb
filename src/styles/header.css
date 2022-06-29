@@ -1,0 +1,36 @@
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-color: #4831d4;
+}
+.header nav {
+  height: 100px;
+  position: relative;
+}
+.header nav img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.header nav hr {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 40px;
+  color: #ccf381;
+  width: 47px;
+  left: 120px;
+}
+.header nav span,
+.header nav a {
+  color: #ccf381;
+  font-weight: bold;
+  position: absolute;
+  font-size: 0.75rem;
+  top: 42px;
+}
+.header nav span {
+  left: 165px;
+}
+.header nav a {
+  right: 35px;
+}/*# sourceMappingURL=header.css.map */
