@@ -96,9 +96,22 @@
 				width: 10px;
 				height: 10px;
 				background-color: $white;
-				border: 5px solid $primary-green;
-				border-radius: 50%;
+				// border: 5px solid $primary-green;
+				// border-radius: 50%;
 				top: 70px;
+			}
+
+			.eyes::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 12px;
+				transform: translate(-50%, -50%);
+				width: 10px;
+				height: 10px;
+				background: $white;
+				border-radius: 50%;
+				border: 5px solid $primary-green;
 			}
 
 			.eyes.left {
@@ -106,7 +119,7 @@
 			}
 
 			.eyes.right {
-				right: 42px;
+				right: 52px;
 			}
 
 			.lowerEyelid {

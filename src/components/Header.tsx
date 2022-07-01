@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import logo from '../img/logo.png';
 import '../styles/header.css';
 
 function Header() {
+	const [ xEye, setXEye ] = useState(0);
+	const [ yEye, setYEye ] = useState(0);
+	const [ radianEye, setRadianEye ] = useState(0);
+	const [ rotEye, setRotEye ] = useState(0);
+
+	const eyesRef: any = useRef(null);
+
+	useEffect(
+		() => {
+			const update = (e: MouseEvent) => {
+				setXEye(eyesRef.current.offsetLeft + eyesRef.current.offsetWidth / 2);
+				setYEye(eyesRef.current.offsetTop + eyesRef.current.offsetHeight / 2);
+				setRadianEye(Math.atan2(e.clientX - xEye, e.clientY - yEye));
+				setRotEye(radianEye * (180 / Math.PI) * -1 - 270);
+			};
+			window.addEventListener('mousemove', update);
+
+			return () => {
+				window.removeEventListener('mousemove', update);
+			};
+		},
+		[ radianEye ]
+	);
+
+	const styleEyes = {
+		transform: 'rotate(' + rotEye + 'deg)'
+	};
+
 	return (
 		<div className="header">
 			<nav>
@@ -16,8 +44,8 @@ function Header() {
 				<div className="face">
 					<div className="eyebrows left" />
 					<div className="eyebrows right" />
-					<div className="eyes left" />
-					<div className="eyes right" />
+					<div ref={eyesRef} style={styleEyes} className={`eyes left`} />
+					<div ref={eyesRef} style={styleEyes} className={`eyes right`} />
 					<div className="lowerEyelid left" />
 					<div className="lowerEyelid right" />
 					<div className="nose" />

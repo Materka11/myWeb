@@ -83,15 +83,25 @@
   width: 10px;
   height: 10px;
   background-color: #ffffff;
-  border: 5px solid #ccf381;
-  border-radius: 50%;
   top: 70px;
+}
+.header .head .face .eyes::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 5px solid #ccf381;
 }
 .header .head .face .eyes.left {
   left: 39px;
 }
 .header .head .face .eyes.right {
-  right: 42px;
+  right: 52px;
 }
 .header .head .face .lowerEyelid {
   width: 16px;
