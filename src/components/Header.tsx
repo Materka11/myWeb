@@ -8,15 +8,29 @@ function Header() {
 	const [ radianEye, setRadianEye ] = useState(0);
 	const [ rotEye, setRotEye ] = useState(0);
 
+	const [ xHead, setXHead ] = useState(0);
+	const [ yHead, setYHead ] = useState(0);
+	const [ rotXHead, setRotXHead ] = useState(0);
+	const [ rotYHead, setRotYHead ] = useState(0);
+
 	const eyesRef: any = useRef(null);
 
 	useEffect(
 		() => {
 			const update = (e: MouseEvent) => {
-				setXEye(eyesRef.current.offsetLeft + eyesRef.current.offsetWidth / 2);
-				setYEye(eyesRef.current.offsetTop + eyesRef.current.offsetHeight / 2);
-				setRadianEye(Math.atan2(e.clientX - xEye, e.clientY - yEye));
-				setRotEye(radianEye * (180 / Math.PI) * -1 - 270);
+				const { innerWidth } = window;
+
+				if (innerWidth >= 1440) {
+					setXEye(eyesRef.current.offsetLeft + eyesRef.current.offsetWidth / 2);
+					setYEye(eyesRef.current.offsetTop + eyesRef.current.offsetHeight / 2);
+					setRadianEye(Math.atan2(e.clientX - xEye, e.clientY - yEye));
+					setRotEye(radianEye * (180 / Math.PI) * -1 - 270);
+
+					setXHead(xHead + (e.clientX - xHead) * 0.15);
+					setYHead(yHead + (e.clientY - yHead) * 0.15);
+					setRotXHead(xHead / innerWidth * -2 + 1);
+					setRotYHead(yHead / innerWidth * 2 - 1);
+				}
 			};
 			window.addEventListener('mousemove', update);
 
@@ -31,6 +45,11 @@ function Header() {
 		transform: 'rotate(' + rotEye + 'deg)'
 	};
 
+	const styleHead = {
+		transform:
+			'rotateX(calc(-15deg * ' + rotXHead + '))  rotateY(calc(-15deg * ' + rotYHead + ')) translate(-50%, 0)'
+	};
+
 	return (
 		<div className="header">
 			<nav>
@@ -39,7 +58,7 @@ function Header() {
 				<span>MENU</span>
 				<a href="mailto:arekmaterka11@gmail.com?subject=Hi Arek, I'd like to say hello">SAY HELLO</a>
 			</nav>
-			<div className="head">
+			<div style={styleHead} className="head">
 				<div className="hair" />
 				<div className="face">
 					<div className="eyebrows left" />

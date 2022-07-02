@@ -49,6 +49,7 @@
 		top: 50px;
 		left: 50%;
 		transform: translate(-50%, 0);
+		z-index: 2;
 
 		div {
 			position: absolute;
@@ -220,7 +221,6 @@
 			transform: rotate(-30deg);
 			border-left: none;
 		}
-
 		.body {
 			width: 301px;
 			height: 107px;
@@ -231,6 +231,18 @@
 			bottom: 0;
 			left: 50%;
 			transform: translate(-50%, 0);
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.header {
+		.head {
+			.face {
+				.eyes.right {
+					right: 42px;
+				}
+			}
 		}
 	}
 }
