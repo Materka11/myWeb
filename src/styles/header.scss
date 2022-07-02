@@ -42,205 +42,241 @@
 		}
 	}
 
-	.head {
-		width: 301px;
-		height: 436px;
-		position: relative;
-		top: 50px;
-		left: 50%;
-		transform: translate(-50%, 0);
-		z-index: 2;
+	.bust {
+		transform: scale(0.8);
 
-		div {
-			position: absolute;
-		}
-
-		.hair {
-			width: 218px;
-			height: 90px;
-			background-color: $primary-green;
-			border-radius: 100px 70px 30px 0;
-			left: 50%;
-			transform: translate(-50%, 0);
-		}
-
-		.face {
-			width: 197px;
-			height: 215px;
-			background-color: $white;
-			border: 5px solid $primary-green;
-			position: relative;
-			border-radius: 5px 0 100px 100px;
-			left: calc(50% - 5.5px);
-			transform: translate(-50%, 0);
-			top: 80px;
-			z-index: 2;
-
-			.eyebrows {
-				width: 59px;
-				height: 16px;
-				background-color: $primary-green;
-				top: 37px;
-			}
-
-			.eyebrows.left {
-				left: 20px;
-				border-radius: 100px 100px 0 100px;
-			}
-
-			.eyebrows.right {
-				right: 22px;
-				border-radius: 100px 100px 100px 0;
-			}
-
-			.eyes {
-				width: 10px;
-				height: 10px;
-				background-color: $white;
-				// border: 5px solid $primary-green;
-				// border-radius: 50%;
-				top: 70px;
-			}
-
-			.eyes::before {
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 12px;
-				transform: translate(-50%, -50%);
-				width: 10px;
-				height: 10px;
-				background: $white;
-				border-radius: 50%;
-				border: 5px solid $primary-green;
-			}
-
-			.eyes.left {
-				left: 39px;
-			}
-
-			.eyes.right {
-				right: 52px;
-			}
-
-			.lowerEyelid {
-				width: 16px;
-				height: 5px;
-				background-color: $primary-green;
-				top: 96.5px;
-			}
-
-			.lowerEyelid.left {
-				left: 40.5px;
-			}
-
-			.lowerEyelid.right {
-				right: 44.5px;
-			}
-
-			.nose {
-				width: 44px;
-				height: 70px;
-				border-radius: 0 0 100px 100px;
-				background-color: $white;
-				border: solid 5px $primary-green;
-				border-top: none;
-				border-right: none;
-				left: 50%;
-				transform: translate(-50%, 0);
-				top: 53px;
-			}
-
-			.mouth {
-				width: 73px;
-				height: 15px;
-				border-radius: 0 0 100px 5px;
-				background-color: $white;
-				border: 5px solid $primary-green;
-				border-top: none;
-				border-left: none;
-				left: 50%;
-				transform: translate(-50%, 0);
-				top: 140px;
-			}
-		}
-
-		.ears {
-			width: 23px;
-			height: 73px;
-			border-radius: 100px 0 0 100px;
-			background-color: $white;
-			border: 5px solid $primary-green;
-			position: relative;
-
-			.line {
-				width: 5px;
-				height: 27px;
-				background-color: $primary-green;
-				transform: rotate(-20deg);
-				top: 29.3px;
-				left: 9.9px;
-			}
-		}
-
-		.ears.left {
-			left: 13px;
-			top: -90px;
-		}
-
-		.ears.right {
-			transform: rotate(180deg);
-			top: -170px;
-			left: 244px;
-
-			.line {
-				top: 18.3px;
-				transform: rotate(200deg);
-			}
-		}
-
-		.neck {
-			width: 107px;
-			height: 80px;
-			border-radius: 20px;
-			background-color: $white;
-			border: 5px solid $primary-green;
-			top: 295px;
-			border-top: none;
-			z-index: 1;
-		}
-
-		.neck.left {
-			left: 70px;
-			transform: rotate(30deg);
-			border-right: none;
-		}
-
-		.neck.right {
-			right: 70px;
-			transform: rotate(-30deg);
-			border-left: none;
-		}
-		.body {
+		.head {
 			width: 301px;
-			height: 107px;
-			border-radius: 44px 44px 0 0;
-			border: 5px solid $primary-green;
-			border-bottom: none;
-			background-color: $white;
-			bottom: 0;
+			height: 436px;
+			position: relative;
+			top: -40px;
 			left: 50%;
 			transform: translate(-50%, 0);
+
+			div {
+				position: absolute;
+			}
+
+			.hair {
+				width: 218px;
+				height: 90px;
+				background-color: $primary-green;
+				border-radius: 100px 70px 30px 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+
+			.face {
+				width: 197px;
+				height: 215px;
+				background-color: $white;
+				border: 5px solid $primary-green;
+				position: relative;
+				border-radius: 5px 0 100px 100px;
+				left: calc(50% - 5.5px);
+				transform: translate(-50%, 0);
+				top: 80px;
+				z-index: 2;
+
+				.eyebrows {
+					width: 59px;
+					height: 16px;
+					background-color: $primary-green;
+					top: 37px;
+				}
+
+				.eyebrows.left {
+					left: 20px;
+					border-radius: 100px 100px 0 100px;
+				}
+
+				.eyebrows.right {
+					right: 22px;
+					border-radius: 100px 100px 100px 0;
+				}
+
+				.eyes {
+					width: 10px;
+					height: 10px;
+					background-color: $white;
+					// border: 5px solid $primary-green;
+					// border-radius: 50%;
+					top: 70px;
+				}
+
+				.eyes::before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 12px;
+					transform: translate(-50%, -50%);
+					width: 10px;
+					height: 10px;
+					background: $white;
+					border-radius: 50%;
+					border: 5px solid $primary-green;
+				}
+
+				.eyes.left {
+					left: 39px;
+				}
+
+				.eyes.right {
+					right: 52px;
+				}
+
+				.lowerEyelid {
+					width: 16px;
+					height: 5px;
+					background-color: $primary-green;
+					top: 96.5px;
+				}
+
+				.lowerEyelid.left {
+					left: 40.5px;
+				}
+
+				.lowerEyelid.right {
+					right: 44.5px;
+				}
+
+				.nose {
+					width: 44px;
+					height: 70px;
+					border-radius: 0 0 100px 100px;
+					background-color: $white;
+					border: solid 5px $primary-green;
+					border-top: none;
+					border-right: none;
+					left: 50%;
+					transform: translate(-50%, 0);
+					top: 53px;
+				}
+
+				.mouth {
+					width: 73px;
+					height: 15px;
+					border-radius: 0 0 100px 5px;
+					background-color: $white;
+					border: 5px solid $primary-green;
+					border-top: none;
+					border-left: none;
+					left: 50%;
+					transform: translate(-50%, 0);
+					top: 140px;
+				}
+			}
+
+			.ears {
+				width: 23px;
+				height: 73px;
+				border-radius: 100px 0 0 100px;
+				background-color: $white;
+				border: 5px solid $primary-green;
+				position: relative;
+
+				.line {
+					width: 5px;
+					height: 27px;
+					background-color: $primary-green;
+					transform: rotate(-20deg);
+					top: 29.3px;
+					left: 9.9px;
+				}
+			}
+
+			.ears.left {
+				left: 13px;
+				top: -90px;
+			}
+
+			.ears.right {
+				transform: rotate(180deg);
+				top: -170px;
+				left: 244px;
+
+				.line {
+					top: 18.3px;
+					transform: rotate(200deg);
+				}
+			}
+
+			.neck {
+				width: 107px;
+				height: 80px;
+				border-radius: 20px;
+				background-color: $white;
+				border: 5px solid $primary-green;
+				top: 295px;
+				border-top: none;
+				z-index: 1;
+			}
+
+			.neck.left {
+				left: 70px;
+				transform: rotate(30deg);
+				border-right: none;
+			}
+
+			.neck.right {
+				right: 70px;
+				transform: rotate(-30deg);
+				border-left: none;
+			}
+			.body {
+				width: 301px;
+				height: 107px;
+				border-radius: 44px 44px 0 0;
+				border: 5px solid $primary-green;
+				border-bottom: none;
+				background-color: $white;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
 		}
+	}
+
+	.name {
+		font-size: 2.625rem;
+		color: $primary-green;
+		display: block;
+		margin: -40px auto 0;
+		text-align: center;
+
+		strong {
+			display: block;
+		}
+	}
+
+	span.scroll {
+		color: $primary-green;
+		font-size: 0.75rem;
+		letter-spacing: 2.4px;
+		display: block;
+		margin: 10px auto;
+		text-align: center;
+	}
+
+	div.scroll {
+		width: 1px;
+		height: 50vh;
+		background-color: #a398e9;
+		position: absolute;
+		top: 655px;
+		left: 50%;
 	}
 }
 
 @media (min-width: 1440px) {
 	.header {
-		.head {
-			.face {
-				.eyes.right {
-					right: 42px;
+		.bust {
+			transform: scale(1);
+			.head {
+				.face {
+					.eyes.right {
+						right: 42px;
+					}
 				}
 			}
 		}

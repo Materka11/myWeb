@@ -34,19 +34,21 @@
 .header nav a {
   right: 35px;
 }
-.header .head {
+.header .bust {
+  transform: scale(0.8);
+}
+.header .bust .head {
   width: 301px;
   height: 436px;
   position: relative;
-  top: 50px;
+  top: -40px;
   left: 50%;
   transform: translate(-50%, 0);
-  z-index: 2;
 }
-.header .head div {
+.header .bust .head div {
   position: absolute;
 }
-.header .head .hair {
+.header .bust .head .hair {
   width: 218px;
   height: 90px;
   background-color: #ccf381;
@@ -54,7 +56,7 @@
   left: 50%;
   transform: translate(-50%, 0);
 }
-.header .head .face {
+.header .bust .head .face {
   width: 197px;
   height: 215px;
   background-color: #ffffff;
@@ -66,27 +68,27 @@
   top: 80px;
   z-index: 2;
 }
-.header .head .face .eyebrows {
+.header .bust .head .face .eyebrows {
   width: 59px;
   height: 16px;
   background-color: #ccf381;
   top: 37px;
 }
-.header .head .face .eyebrows.left {
+.header .bust .head .face .eyebrows.left {
   left: 20px;
   border-radius: 100px 100px 0 100px;
 }
-.header .head .face .eyebrows.right {
+.header .bust .head .face .eyebrows.right {
   right: 22px;
   border-radius: 100px 100px 100px 0;
 }
-.header .head .face .eyes {
+.header .bust .head .face .eyes {
   width: 10px;
   height: 10px;
   background-color: #ffffff;
   top: 70px;
 }
-.header .head .face .eyes::before {
+.header .bust .head .face .eyes::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -98,25 +100,25 @@
   border-radius: 50%;
   border: 5px solid #ccf381;
 }
-.header .head .face .eyes.left {
+.header .bust .head .face .eyes.left {
   left: 39px;
 }
-.header .head .face .eyes.right {
+.header .bust .head .face .eyes.right {
   right: 52px;
 }
-.header .head .face .lowerEyelid {
+.header .bust .head .face .lowerEyelid {
   width: 16px;
   height: 5px;
   background-color: #ccf381;
   top: 96.5px;
 }
-.header .head .face .lowerEyelid.left {
+.header .bust .head .face .lowerEyelid.left {
   left: 40.5px;
 }
-.header .head .face .lowerEyelid.right {
+.header .bust .head .face .lowerEyelid.right {
   right: 44.5px;
 }
-.header .head .face .nose {
+.header .bust .head .face .nose {
   width: 44px;
   height: 70px;
   border-radius: 0 0 100px 100px;
@@ -128,7 +130,7 @@
   transform: translate(-50%, 0);
   top: 53px;
 }
-.header .head .face .mouth {
+.header .bust .head .face .mouth {
   width: 73px;
   height: 15px;
   border-radius: 0 0 100px 5px;
@@ -140,7 +142,7 @@
   transform: translate(-50%, 0);
   top: 140px;
 }
-.header .head .ears {
+.header .bust .head .ears {
   width: 23px;
   height: 73px;
   border-radius: 100px 0 0 100px;
@@ -148,7 +150,7 @@
   border: 5px solid #ccf381;
   position: relative;
 }
-.header .head .ears .line {
+.header .bust .head .ears .line {
   width: 5px;
   height: 27px;
   background-color: #ccf381;
@@ -156,20 +158,20 @@
   top: 29.3px;
   left: 9.9px;
 }
-.header .head .ears.left {
+.header .bust .head .ears.left {
   left: 13px;
   top: -90px;
 }
-.header .head .ears.right {
+.header .bust .head .ears.right {
   transform: rotate(180deg);
   top: -170px;
   left: 244px;
 }
-.header .head .ears.right .line {
+.header .bust .head .ears.right .line {
   top: 18.3px;
   transform: rotate(200deg);
 }
-.header .head .neck {
+.header .bust .head .neck {
   width: 107px;
   height: 80px;
   border-radius: 20px;
@@ -179,17 +181,17 @@
   border-top: none;
   z-index: 1;
 }
-.header .head .neck.left {
+.header .bust .head .neck.left {
   left: 70px;
   transform: rotate(30deg);
   border-right: none;
 }
-.header .head .neck.right {
+.header .bust .head .neck.right {
   right: 70px;
   transform: rotate(-30deg);
   border-left: none;
 }
-.header .head .body {
+.header .bust .head .body {
   width: 301px;
   height: 107px;
   border-radius: 44px 44px 0 0;
@@ -200,9 +202,38 @@
   left: 50%;
   transform: translate(-50%, 0);
 }
+.header .name {
+  font-size: 2.625rem;
+  color: #ccf381;
+  display: block;
+  margin: -40px auto 0;
+  text-align: center;
+}
+.header .name strong {
+  display: block;
+}
+.header span.scroll {
+  color: #ccf381;
+  font-size: 0.75rem;
+  letter-spacing: 2.4px;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+.header div.scroll {
+  width: 1px;
+  height: 50vh;
+  background-color: #a398e9;
+  position: absolute;
+  top: 655px;
+  left: 50%;
+}
 
 @media (min-width: 1440px) {
-  .header .head .face .eyes.right {
+  .header .bust {
+    transform: scale(1);
+  }
+  .header .bust .head .face .eyes.right {
     right: 42px;
   }
 }/*# sourceMappingURL=header.css.map */

@@ -58,28 +58,35 @@ function Header() {
 				<span>MENU</span>
 				<a href="mailto:arekmaterka11@gmail.com?subject=Hi Arek, I'd like to say hello">SAY HELLO</a>
 			</nav>
-			<div style={styleHead} className="head">
-				<div className="hair" />
-				<div className="face">
-					<div className="eyebrows left" />
-					<div className="eyebrows right" />
-					<div ref={eyesRef} style={styleEyes} className={`eyes left`} />
-					<div ref={eyesRef} style={styleEyes} className={`eyes right`} />
-					<div className="lowerEyelid left" />
-					<div className="lowerEyelid right" />
-					<div className="nose" />
-					<div className="mouth" />
+			<div className="bust">
+				<div style={styleHead} className="head">
+					<div className="hair" />
+					<div className="face">
+						<div className="eyebrows left" />
+						<div className="eyebrows right" />
+						<div ref={eyesRef} style={styleEyes} className={`eyes left`} />
+						<div ref={eyesRef} style={styleEyes} className={`eyes right`} />
+						<div className="lowerEyelid left" />
+						<div className="lowerEyelid right" />
+						<div className="nose" />
+						<div className="mouth" />
+					</div>
+					<div className="ears left">
+						<div className="line" />
+					</div>
+					<div className="ears right">
+						<div className="line" />
+					</div>
+					<div className="neck left" />
+					<div className="neck right" />
+					<div className="body" />
 				</div>
-				<div className="ears left">
-					<div className="line" />
-				</div>
-				<div className="ears right">
-					<div className="line" />
-				</div>
-				<div className="neck left" />
-				<div className="neck right" />
-				<div className="body" />
 			</div>
+			<span className="name">
+				Hi, my name is <strong>Arek</strong>
+			</span>
+			<span className="scroll">SCROLL</span>
+			<div className="scroll" />
 		</div>
 	);
 }
