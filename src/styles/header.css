@@ -5,12 +5,16 @@
 }
 .header nav {
   height: 100px;
-  position: relative;
+  position: fixed;
+  width: 100vw;
+  z-index: 9999;
+  background: linear-gradient(180deg, #4831d4 85%, hsla(0deg, 0%, 100%, 0));
 }
 .header nav img {
   position: absolute;
   top: 20px;
   left: 20px;
+  width: 106px;
 }
 .header nav hr {
   position: absolute;
@@ -41,7 +45,7 @@
   width: 301px;
   height: 436px;
   position: relative;
-  top: -40px;
+  top: 80px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -202,11 +206,18 @@
   left: 50%;
   transform: translate(-50%, 0);
 }
+.header .background {
+  position: absolute;
+  width: 100vw;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 .header .name {
   font-size: 2.625rem;
   color: #ccf381;
   display: block;
-  margin: -40px auto 0;
+  margin: 60px auto 0;
   text-align: center;
 }
 .header .name strong {

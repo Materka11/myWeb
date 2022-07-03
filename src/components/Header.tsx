@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import logo from '../img/logo.png';
+import background from '../img/Component 12 – 1@2x2.png';
 import '../styles/header.css';
 
 function Header() {
@@ -82,6 +83,7 @@ function Header() {
 					<div className="body" />
 				</div>
 			</div>
+			<img className="background" src={background} alt="background" />
 			<span className="name">
 				Hi, my name is <strong>Arek</strong>
 			</span>
