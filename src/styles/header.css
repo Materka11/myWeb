@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #4831d4;
+  position: relative;
 }
 .header nav {
   height: 100px;
@@ -30,13 +31,48 @@
   font-weight: bold;
   position: absolute;
   font-size: 0.75rem;
-  top: 42px;
 }
-.header nav span {
+.header nav .spanMenu {
   left: 165px;
+  top: 42px;
+  overflow: hidden;
+  width: 65px;
+  height: 15px;
+}
+.header nav .spanMenu .spanLink {
+  display: inline-block;
+  transform: translateY(-20px);
+  height: 15px;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.3);
+  cursor: pointer;
+}
+.header nav .spanMenu .menuSpan {
+  padding: 20px 0;
+}
+.header nav .spanMenu:hover * {
+  letter-spacing: 6px;
 }
 .header nav a {
   right: 35px;
+  top: 42px;
+  transition: letter-spacing 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.3);
+}
+.header nav a:hover {
+  letter-spacing: 6px;
+}
+.header .navMenu {
+  background: none;
+  background-color: #ffffff;
+}
+.header .navMenu hr {
+  background-color: #4831d4;
+}
+.header .navMenu span,
+.header .navMenu a {
+  color: #4831d4;
+}
+.header .navMenu .spanMenu .spanLink {
+  transform: none;
 }
 .header .bust {
   transform: scale(0.8);

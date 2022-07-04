@@ -1,9 +1,15 @@
 import React, { useEffect, useState, useRef } from 'react';
 import logo from '../img/logo.png';
 import background from '../img/Component 12 – 1@2x2.png';
+import logoMenu from '../img/logoMenu.png';
 import '../styles/header.css';
+import Menu from './Menu';
 
-function Header() {
+interface NoScroll {
+	setClassNoScroll: React.Dispatch<React.SetStateAction<string>>;
+}
+
+function Header({ setClassNoScroll }: NoScroll) {
 	const [ xEye, setXEye ] = useState(0);
 	const [ yEye, setYEye ] = useState(0);
 	const [ radianEye, setRadianEye ] = useState(0);
@@ -15,6 +21,11 @@ function Header() {
 	const [ rotYHead, setRotYHead ] = useState(0);
 
 	const eyesRef: any = useRef(null);
+
+	const [ classMenu, setClassMenu ] = useState('inactive');
+	const [ isToggledMenu, setIsToggledMenu ] = useState(false);
+	const [ switchLogo, setSwitchLogo ] = useState(logo);
+	const [ classNav, setClassNav ] = useState('');
 
 	useEffect(
 		() => {
@@ -51,12 +62,31 @@ function Header() {
 			'rotateX(calc(-15deg * ' + rotXHead + '))  rotateY(calc(-15deg * ' + rotYHead + ')) translate(-50%, 0)'
 	};
 
+	const handleClickMenu = () => {
+		if (!isToggledMenu) {
+			setClassMenu('active');
+			setIsToggledMenu(true);
+			setClassNoScroll('noScroll');
+			setSwitchLogo(logoMenu);
+			setClassNav('navMenu');
+		} else {
+			setClassMenu('inactive');
+			setIsToggledMenu(false);
+			setClassNoScroll('');
+			setSwitchLogo(logo);
+			setClassNav('');
+		}
+	};
+
 	return (
 		<div className="header">
-			<nav>
-				<img src={logo} alt="logo" />
+			<nav className={classNav}>
+				<img src={switchLogo} alt="logo" />
 				<hr />
-				<span>MENU</span>
+				<span className="spanMenu" onClick={handleClickMenu}>
+					<span className="spanLink">CLOSE</span>
+					<span className="spanLink menuSpan">MENU</span>
+				</span>
 				<a href="mailto:arekmaterka11@gmail.com?subject=Hi Arek, I'd like to say hello">SAY HELLO</a>
 			</nav>
 			<div className="bust">
@@ -89,6 +119,7 @@ function Header() {
 			</span>
 			<span className="scroll">SCROLL</span>
 			<div className="scroll" />
+			<Menu classMenu={classMenu} />
 		</div>
 	);
 }

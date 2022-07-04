@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 
 function App() {
+	const [ classNoScroll, setClassNoScroll ] = useState('');
+
 	return (
-		<div className="App">
-			<Header />
+		<div className={`App ${classNoScroll}`}>
+			<Header setClassNoScroll={setClassNoScroll} />
 		</div>
 	);
 }

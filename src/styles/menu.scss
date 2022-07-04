@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+.inactive {
+	visibility: hidden;
+}
+
+.active {
+	visibility: visible;
+}
+
+.menu {
+	width: 100vw;
+	height: calc(100vh - 100px);
+	overflow: hidden;
+	background-color: $white;
+	position: fixed;
+	top: 100px;
+	bottom: 0;
+}
