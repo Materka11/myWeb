@@ -63,6 +63,7 @@
 .header .navMenu {
   background: none;
   background-color: #ffffff;
+  transition: all 0.25s ease-in-out;
 }
 .header .navMenu hr {
   background-color: #4831d4;

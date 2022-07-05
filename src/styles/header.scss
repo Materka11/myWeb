@@ -75,6 +75,7 @@
 	.navMenu {
 		background: none;
 		background-color: $white;
+		transition: all .25s ease-in-out;
 
 		hr {
 			background-color: $primary-purple;
