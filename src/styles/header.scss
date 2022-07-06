@@ -316,6 +316,33 @@
 		text-align: center;
 	}
 
+	span.scroll::before {
+		content: 'SCROLL';
+		animation: scroll infinite 15s;
+	}
+
+	@keyframes scroll {
+		0% {
+			content: "SCROLL";
+		}
+
+		25% {
+			filter: blur(1px);
+			opacity: 0;
+		}
+
+		50% {
+			content: 'DOWN';
+			filter: blur(0px);
+			opacity: 1;
+		}
+
+		75% {
+			filter: blur(1px);
+			opacity: 0;
+		}
+	}
+
 	div.scroll {
 		width: 1px;
 		height: 50vh;

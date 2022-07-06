@@ -117,7 +117,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 			<span className="name">
 				Hi, my name is <strong>Arek</strong>
 			</span>
-			<span className="scroll">SCROLL</span>
+			<span className="scroll" />
 			<div className="scroll" />
 			<Menu classMenu={classMenu} />
 		</div>

@@ -268,6 +268,47 @@
   margin: 10px auto;
   text-align: center;
 }
+.header span.scroll::before {
+  content: "SCROLL";
+  -webkit-animation: scroll infinite 15s;
+          animation: scroll infinite 15s;
+}
+@-webkit-keyframes scroll {
+  0% {
+    content: "SCROLL";
+  }
+  25% {
+    filter: blur(1px);
+    opacity: 0;
+  }
+  50% {
+    content: "DOWN";
+    filter: blur(0px);
+    opacity: 1;
+  }
+  75% {
+    filter: blur(1px);
+    opacity: 0;
+  }
+}
+@keyframes scroll {
+  0% {
+    content: "SCROLL";
+  }
+  25% {
+    filter: blur(1px);
+    opacity: 0;
+  }
+  50% {
+    content: "DOWN";
+    filter: blur(0px);
+    opacity: 1;
+  }
+  75% {
+    filter: blur(1px);
+    opacity: 0;
+  }
+}
 .header div.scroll {
   width: 1px;
   height: 50vh;
