@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AboutMe from './components/AboutMe';
 import Header from './components/Header';
+import Work from './components/Work';
 
 function App() {
 	const [ classNoScroll, setClassNoScroll ] = useState('');
@@ -9,6 +10,7 @@ function App() {
 		<div className={`App ${classNoScroll}`}>
 			<Header setClassNoScroll={setClassNoScroll} />
 			<AboutMe />
+			<Work />
 		</div>
 	);
 }

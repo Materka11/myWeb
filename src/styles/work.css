@@ -1,0 +1,10 @@
+.work {
+  height: 100vh;
+  overflow: scroll;
+}
+.work .containerOuter {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 100%;
+}/*# sourceMappingURL=work.css.map */
