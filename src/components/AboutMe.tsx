@@ -16,21 +16,19 @@ function AboutMe() {
 						this technology.
 					</p>
 				</div>
-				<div className="container">
+				<div className="container skill">
 					<span>Skill</span>
-					<p>
-						<ul>
-							<li>Very good knowledge of HTML5, CSS3 and JavaScript (ES6)</li>
-							<li>Good knowledge of React 17</li>
-							<li>Ability to build an application with React 17</li>
-							<li>Ability to use the Git version control system</li>
-							<li>Ability to use Sass</li>
-							<li>Basic unit testing skills using the Jest framework and the Testing Library</li>
-							<li>Basic knowledge of TypeScript</li>
-							<li>Basic knowledge of PHP and MySQL</li>
-							<li>Basic design skills in Adobe XD</li>
-						</ul>
-					</p>
+					<ul>
+						<li>Very good knowledge of HTML5, CSS3 and JavaScript (ES6)</li>
+						<li>Good knowledge of React 17</li>
+						<li>Ability to build an application with React 17</li>
+						<li>Ability to use the Git version control system</li>
+						<li>Ability to use Sass</li>
+						<li>Basic unit testing skills using the Jest framework and the Testing Library</li>
+						<li>Basic knowledge of TypeScript</li>
+						<li>Basic knowledge of PHP and MySQL</li>
+						<li>Basic design skills in Adobe XD</li>
+					</ul>
 				</div>
 			</div>
 		</div>

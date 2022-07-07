@@ -24,6 +24,7 @@
   background-color: #ccf381;
   width: 47px;
   left: 120px;
+  border-color: #ccf381;
 }
 .header nav span,
 .header nav a {
@@ -311,7 +312,7 @@
 }
 .header div.scroll {
   width: 1px;
-  height: 35vh;
+  height: 37vh;
   background-color: #a398e9;
   position: absolute;
   top: 655px;

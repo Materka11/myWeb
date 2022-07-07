@@ -27,6 +27,7 @@
 			background-color: $primary-green;
 			width: 47px;
 			left: 120px;
+			border-color: $primary-green;
 		}
 
 		span,
@@ -345,7 +346,7 @@
 
 	div.scroll {
 		width: 1px;
-		height: 35vh;
+		height: 37vh;
 		background-color: #a398e9;
 		position: absolute;
 		top: 655px;
