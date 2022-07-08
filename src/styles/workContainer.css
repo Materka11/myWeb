@@ -37,6 +37,7 @@
   left: 40%;
   transform: translate(-50%, -50%);
   top: 50%;
+  text-transform: uppercase;
 }
 .container a .icon {
   color: #4831d4;
