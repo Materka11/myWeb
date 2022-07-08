@@ -1,0 +1,59 @@
+@import './variables.scss';
+.form {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	background-color: #f9f9f9;
+
+	.text {
+		position: absolute;
+		top: 150px;
+		margin: 0 30px;
+		color: $primary-purple;
+
+		span {
+			font-weight: bold;
+			font-size: 1.75rem;
+		}
+
+		p {
+			font-size: 1rem;
+			margin: 13px 0;
+		}
+	}
+
+	form {
+		position: absolute;
+		top: 300px;
+		margin: 0 30px;
+		width: calc(100% - 90px);
+
+		fieldset {
+			border: none;
+			padding: 0;
+			margin: 0;
+			color: rgba(61, 21, 95, 0.5);
+
+			.formRow {
+				margin: 10px 0;
+
+				span {
+					font-size: 0.6875rem;
+				}
+				.input {
+					border: none;
+					background-color: #f9f9f9;
+					border-bottom: 1px solid rgba(61, 21, 95, 0.5);
+					border-radius: 0;
+					width: 100%;
+					padding: 10px 3px;
+				}
+
+				textarea {
+					resize: none;
+					min-height: 50px;
+				}
+			}
+		}
+	}
+}
