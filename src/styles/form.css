@@ -42,9 +42,56 @@
   border-bottom: 1px solid rgba(61, 21, 95, 0.5);
   border-radius: 0;
   width: 100%;
-  padding: 10px 3px;
+  padding: 10px 10px;
 }
 .form form fieldset .formRow textarea {
   resize: none;
   min-height: 50px;
+}
+.form form button {
+  position: absolute;
+  width: calc(100% + 20px);
+  height: 60px;
+  border: 2px solid #4831d4;
+  background-color: #4831d4;
+  color: #ffffff;
+  font-size: 1rem;
+  bottom: -80px;
+  font-weight: bold;
+  overflow: hidden;
+}
+.form form button span {
+  position: absolute;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  text-transform: uppercase;
+}
+.form form button .icon {
+  color: #ffffff;
+  font-size: 2rem;
+  position: absolute;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+.form form button .btnDynamic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all ease 0.5s;
+  background-color: #ffffff;
+  color: #4831d4;
+}
+.form form button .btnDynamic .icon {
+  color: #4831d4;
+}
+.form form button:hover .btnDynamic {
+  transform: translateX(100%);
 }/*# sourceMappingURL=form.css.map */

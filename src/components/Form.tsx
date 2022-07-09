@@ -72,8 +72,12 @@ function Form() {
 					</div>
 				</fieldset>
 				<button type="submit">
-					<span>SEND</span>
+					<span>SEND MESSAGE</span>
 					<BsArrowRight className="icon" />
+					<div className="btnDynamic">
+						<span>SEND MESSAGE</span>
+						<BsArrowRight className="icon" />
+					</div>
 				</button>
 			</form>
 		</div>
