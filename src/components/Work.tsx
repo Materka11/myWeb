@@ -9,7 +9,9 @@ function Work() {
 			<div className="containerOuter">
 				<WorkContainer
 					title={'Raport Game'}
-					description={'A game of choosing whether the suspect is guilty or not. Created in pure JavaScript.'}
+					description={
+						'A game of choosing whether the suspect is guilty or not. Created in pure JavaScript. It only works on the PC'
+					}
 					date={'January 2021'}
 					isCodeOrWork={'work'}
 					backgroundColor={'purple'}

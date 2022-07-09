@@ -14,11 +14,18 @@ interface WorkContainer {
 
 function WorkContainer({ title, description, date, isCodeOrWork, backgroundColor, link }: WorkContainer) {
 	let styleContainer;
+	let styleButton;
 
 	if (backgroundColor === 'purple') {
 		styleContainer = { backgroundColor: '#4831d4', color: '#ffffff' };
 	} else if (backgroundColor === 'white') {
 		styleContainer = { backgroundColor: '#ffffff', color: '#4831d4' };
+	}
+
+	if (backgroundColor === 'purple') {
+		styleButton = { border: '2px solid #ffffff' };
+	} else if (backgroundColor === 'white') {
+		styleButton = { border: '2px solid #4831d4' };
 	}
 
 	return (
@@ -32,9 +39,13 @@ function WorkContainer({ title, description, date, isCodeOrWork, backgroundColor
 					<strong>Created in {date}</strong>
 				</p>
 			</div>
-			<a href={link}>
+			<a href={link} style={styleButton}>
 				<span>SEE MY {isCodeOrWork}</span>
 				<BsArrowRight className="icon" />
+				<div className="btnDynamic">
+					<span>SEE MY {isCodeOrWork}</span>
+					<BsArrowRight className="icon" />
+				</div>
 			</a>
 		</div>
 	);

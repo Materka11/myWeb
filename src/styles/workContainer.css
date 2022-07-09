@@ -25,12 +25,12 @@
   transform: translate(-50%, 0);
   width: 300px;
   height: 60px;
-  border: 2px solid #4831d4;
-  background-color: #ffffff;
-  color: #4831d4;
+  background-color: #4831d4;
+  color: #ffffff;
   font-size: 1rem;
   bottom: 130px;
   font-weight: bold;
+  overflow: hidden;
 }
 .container a span {
   position: absolute;
@@ -40,10 +40,30 @@
   text-transform: uppercase;
 }
 .container a .icon {
-  color: #4831d4;
+  color: #ffffff;
   font-size: 2rem;
   position: absolute;
   left: 80%;
   transform: translate(-50%, -50%);
   top: 50%;
+}
+.container a .btnDynamic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all ease 0.5s;
+  background-color: #ffffff;
+  color: #4831d4;
+}
+.container a .btnDynamic .icon {
+  color: #4831d4;
+}
+.container a:hover .btnDynamic {
+  transform: translateX(100%);
 }/*# sourceMappingURL=workContainer.css.map */
