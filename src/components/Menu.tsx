@@ -1,10 +1,25 @@
 import React from 'react';
 
+import AboutMe from './AboutMe';
+import Form from './Form';
+import Header from './Header';
+import Work from './Work';
+
 import '../styles/menu.css';
 
 import { BsGithub, BsInstagram, BsFacebook } from 'react-icons/bs';
 
-function Menu({ classMenu }: { classMenu: string }) {
+function Menu({ classMenu, handleClickMenu }: { classMenu: string; handleClickMenu: () => void }) {
+	const scrollToComponent = (value: number) => {
+		const { innerHeight } = window;
+		setTimeout(() => {
+			window.scrollTo({
+				top: innerHeight * value + 100,
+				behavior: 'smooth'
+			});
+		}, 0);
+	};
+
 	return (
 		<div className={`menu ${classMenu}`}>
 			<div className="socialLink">
@@ -22,10 +37,37 @@ function Menu({ classMenu }: { classMenu: string }) {
 				</div>
 			</div>
 			<ul className="link">
-				<a>HOME</a>
-				<a>ABOUT ME</a>
-				<a>WORK</a>
-				<a>CONTACT</a>
+				<button
+					onClick={() => {
+						handleClickMenu();
+					}}
+				>
+					HOME
+				</button>
+				<button
+					onClick={() => {
+						scrollToComponent(1);
+						handleClickMenu();
+					}}
+				>
+					ABOUT ME
+				</button>
+				<button
+					onClick={() => {
+						scrollToComponent(2);
+						handleClickMenu();
+					}}
+				>
+					WORK
+				</button>
+				<button
+					onClick={() => {
+						scrollToComponent(3);
+						handleClickMenu();
+					}}
+				>
+					CONTACT
+				</button>
 			</ul>
 		</div>
 	);

@@ -119,7 +119,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 			</span>
 			<span className="scroll" />
 			<div className="scroll" />
-			<Menu classMenu={classMenu} />
+			<Menu classMenu={classMenu} handleClickMenu={handleClickMenu} />
 		</div>
 	);
 }

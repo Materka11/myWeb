@@ -6,7 +6,7 @@
 }
 .form .text {
   position: absolute;
-  top: 150px;
+  top: 15%;
   margin: 0 30px;
   color: #4831d4;
 }
@@ -20,7 +20,7 @@
 }
 .form form {
   position: absolute;
-  top: 300px;
+  top: 30%;
   margin: 0 30px;
   width: calc(100% - 90px);
 }
