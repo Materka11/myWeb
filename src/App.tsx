@@ -3,6 +3,7 @@ import AboutMe from './components/AboutMe';
 import Form from './components/Form';
 import Header from './components/Header';
 import Work from './components/Work';
+import Footer from './components/Footer';
 
 function App() {
 	const [ classNoScroll, setClassNoScroll ] = useState('');
@@ -13,6 +14,7 @@ function App() {
 			<AboutMe />
 			<Work />
 			<Form />
+			<Footer />
 		</div>
 	);
 }
