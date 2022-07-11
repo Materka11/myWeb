@@ -1,0 +1,60 @@
+@media (min-width: 1440px) {
+  .header nav hr {
+    display: none;
+  }
+  .header nav .spanMenu {
+    display: none;
+  }
+  .header nav .icon {
+    position: absolute;
+    color: #ffffff;
+    font-size: 2rem;
+    right: 115px;
+    top: 35px;
+    display: block;
+  }
+  .header .bust {
+    transform: scale(1);
+  }
+  .header .bust .head {
+    left: 65%;
+    top: 170px;
+  }
+  .header .bust .head .face .eyes.right {
+    right: 42px;
+  }
+  .header .background {
+    height: 200px;
+    width: 700px;
+    top: 350px;
+    left: 56%;
+  }
+  .header .name {
+    margin: -200px 120px;
+    text-align: left;
+    font-size: 5rem;
+  }
+  .header .name .hi {
+    font-weight: 400;
+    display: block;
+  }
+  .header .name strong {
+    display: inline-block;
+  }
+  .header .name .description {
+    display: block;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    width: 500px;
+  }
+  .header span.scroll {
+    position: absolute;
+    top: 600px;
+    left: 300px;
+    transform: translate(-20%, 0);
+  }
+  .header div.scroll {
+    top: 650px;
+    left: 327px;
+  }
+}/*# sourceMappingURL=header.css.map */

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/work.css';
+import '../styles/mobile/work.css';
 import WorkContainer from './WorkContainer';
 
 function Work() {

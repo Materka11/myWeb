@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import '../variables.scss';
 
 .header {
 	width: 100vw;
@@ -69,7 +69,11 @@
 		}
 
 		a:hover {
-			letter-spacing: 6px;
+			letter-spacing: 1px;
+		}
+
+		.icon {
+			display: none;
 		}
 	}
 
@@ -95,6 +99,8 @@
 
 	.bust {
 		transform: scale(0.8);
+		position: relative;
+		z-index: 2;
 
 		.head {
 			width: 301px;
@@ -103,6 +109,7 @@
 			top: 80px;
 			left: 50%;
 			transform: translate(-50%, 0);
+			z-index: 2;
 
 			div {
 				position: absolute;
@@ -294,6 +301,7 @@
 		top: 140px;
 		left: 50%;
 		transform: translate(-50%, 0);
+		z-index: 1;
 	}
 
 	.name {
@@ -304,7 +312,11 @@
 		text-align: center;
 
 		strong {
-			display: block;
+			display: inline-block;
+		}
+
+		.description {
+			display: none;
 		}
 	}
 
@@ -314,6 +326,8 @@
 		letter-spacing: 2.4px;
 		display: block;
 		margin: 10px auto;
+		text-align: center;
+		width: 100px;
 		text-align: center;
 	}
 
@@ -327,7 +341,7 @@
 			content: "SCROLL";
 		}
 
-		25% {
+		20% {
 			filter: blur(1px);
 			opacity: 0;
 		}
@@ -338,7 +352,7 @@
 			opacity: 1;
 		}
 
-		75% {
+		70% {
 			filter: blur(1px);
 			opacity: 0;
 		}
@@ -351,20 +365,5 @@
 		position: absolute;
 		top: 655px;
 		left: 50%;
-	}
-}
-
-@media (min-width: 1440px) {
-	.header {
-		.bust {
-			transform: scale(1);
-			.head {
-				.face {
-					.eyes.right {
-						right: 42px;
-					}
-				}
-			}
-		}
 	}
 }

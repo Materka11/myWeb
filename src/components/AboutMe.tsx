@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/aboutMe.css';
+import '../styles/mobile/aboutMe.css';
 
 function AboutMe() {
 	return (

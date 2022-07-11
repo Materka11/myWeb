@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/footer.css';
+import '../styles/mobile/footer.css';
 
 import { BsGithub, BsInstagram, BsFacebook } from 'react-icons/bs';
 

@@ -1,0 +1,74 @@
+@import '../variables.scss';
+@media (min-width: 1440px) {
+	.header {
+		nav {
+			hr {
+				display: none;
+			}
+
+			.spanMenu {
+				display: none;
+			}
+			.icon {
+				position: absolute;
+				color: $white;
+				font-size: 2rem;
+				right: 115px;
+				top: 35px;
+				display: block;
+			}
+		}
+		.bust {
+			transform: scale(1);
+			.head {
+				left: 65%;
+				top: 170px;
+				.face {
+					.eyes.right {
+						right: 42px;
+					}
+				}
+			}
+		}
+		.background {
+			height: 200px;
+			width: 700px;
+			top: 350px;
+			left: 56%;
+		}
+
+		.name {
+			margin: -200px 120px;
+			text-align: left;
+			font-size: 5rem;
+
+			.hi {
+				font-weight: 400;
+				display: block;
+			}
+
+			strong {
+				display: inline-block;
+			}
+
+			.description {
+				display: block;
+				font-size: 1.5rem;
+				margin: 20px 0;
+				width: 500px;
+			}
+		}
+
+		span.scroll {
+			position: absolute;
+			top: 600px;
+			left: 300px;
+			transform: translate(-20%, 0);
+		}
+
+		div.scroll {
+			top: 650px;
+			left: 327px;
+		}
+	}
+}

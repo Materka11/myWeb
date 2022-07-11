@@ -2,8 +2,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import logo from '../img/logo.png';
 import background from '../img/Component 12 – 1@2x2.png';
 import logoMenu from '../img/logoMenu.png';
-import '../styles/header.css';
+import '../styles/mobile/header.css';
+import '../styles/desktop/header.css';
 import Menu from './Menu';
+
+import { FiMessageCircle } from 'react-icons/fi';
 
 interface NoScroll {
 	setClassNoScroll: React.Dispatch<React.SetStateAction<string>>;
@@ -30,7 +33,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 	useEffect(
 		() => {
 			const update = (e: MouseEvent) => {
-				const { innerWidth } = window;
+				const { innerWidth, innerHeight } = window;
 
 				if (innerWidth >= 1440) {
 					setXEye(eyesRef.current.offsetLeft + eyesRef.current.offsetWidth / 2);
@@ -41,7 +44,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 					setXHead(xHead + (e.clientX - xHead) * 0.15);
 					setYHead(yHead + (e.clientY - yHead) * 0.15);
 					setRotXHead(xHead / innerWidth * -2 + 1);
-					setRotYHead(yHead / innerWidth * 2 - 1);
+					setRotYHead(yHead / innerHeight * 2 - 1);
 				}
 			};
 			window.addEventListener('mousemove', update);
@@ -87,6 +90,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 					<span className="spanLink">CLOSE</span>
 					<span className="spanLink menuSpan">MENU</span>
 				</span>
+				<FiMessageCircle className="icon" />
 				<a href="mailto:arekmaterka11@gmail.com?subject=Hi Arek, I'd like to say hello">SAY HELLO</a>
 			</nav>
 			<div className="bust">
@@ -115,7 +119,10 @@ function Header({ setClassNoScroll }: NoScroll) {
 			</div>
 			<img className="background" src={background} alt="background" />
 			<span className="name">
-				Hi, my name is <strong>Arek</strong>
+				<strong className="hi">Hi, my</strong> name is <strong>Arek</strong>
+				<span className="description">
+					I'm a <strong>self-taught frontend developer</strong> from Pomorskie, Poland.
+				</span>
 			</span>
 			<span className="scroll" />
 			<div className="scroll" />

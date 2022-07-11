@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/workContainer.css';
+import '../styles/mobile/workContainer.css';
 import { BsArrowRight } from 'react-icons/bs';
 
 interface WorkContainer {

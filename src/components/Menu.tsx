@@ -5,7 +5,7 @@ import Form from './Form';
 import Header from './Header';
 import Work from './Work';
 
-import '../styles/menu.css';
+import '../styles/mobile/menu.css';
 
 import { BsGithub, BsInstagram, BsFacebook } from 'react-icons/bs';
 

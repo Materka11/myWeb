@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useState, useReducer } from 'react';
 
-import '../styles/form.css';
+import '../styles/mobile/form.css';
 import { BsArrowRight } from 'react-icons/bs';
 
 import { useForm } from '../hooks/useForm';
