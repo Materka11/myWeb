@@ -57,4 +57,58 @@
     top: 650px;
     left: 327px;
   }
+  .header .menuDesktop {
+    display: block;
+    position: absolute;
+    bottom: 55px;
+    right: 25px;
+    width: 100px;
+    height: 150px;
+  }
+  .header .menuDesktop .headerMenu {
+    font-size: 0.75rem;
+    color: #ccf381;
+    font-weight: bold;
+    border-bottom: 1px solid #ccf381;
+    text-align: right;
+    display: block;
+    padding: 0 0 7.5px;
+    margin: 0 0 20px 50px;
+  }
+  .header .menuDesktop .menuDesktopFixed {
+    position: fixed;
+    width: 100px;
+  }
+  .header .menuDesktop .menuDesktopFixed .subMenu {
+    margin: 5px 0;
+    position: relative;
+  }
+  .header .menuDesktop .menuDesktopFixed .subMenu .dot {
+    width: 15px;
+    height: 15px;
+    background-color: #ccf381;
+    border: 3px solid #ccf381;
+    box-sizing: border-box;
+    transform: rotate(45deg) scale(0.5);
+    position: absolute;
+  }
+  .header .menuDesktop .menuDesktopFixed .subMenu .line {
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: #ccf381;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .header .menuDesktop .menuDesktopFixed .subMenu button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #ccf381;
+    font-size: 0.75rem;
+    text-align: right;
+    width: 100%;
+    padding: 0 0 20px 0;
+  }
 }/*# sourceMappingURL=header.css.map */

@@ -70,5 +70,65 @@
 			top: 650px;
 			left: 327px;
 		}
+
+		.menuDesktop {
+			display: block;
+			position: absolute;
+			bottom: 55px;
+			right: 25px;
+			width: 100px;
+			height: 150px;
+
+			.headerMenu {
+				font-size: .75rem;
+				color: $primary-green;
+				font-weight: bold;
+				border-bottom: 1px solid $primary-green;
+				text-align: right;
+				display: block;
+				padding: 0 0 7.5px;
+				margin: 0 0 20px 50px;
+			}
+
+			.menuDesktopFixed {
+				position: fixed;
+				width: 100px;
+
+				.subMenu {
+					margin: 5px 0;
+					position: relative;
+					.dot {
+						width: 15px;
+						height: 15px;
+						background-color: $primary-green;
+						border: 3px solid $primary-green;
+						box-sizing: border-box;
+						transform: rotate(45deg) scale(0.5);
+						position: absolute;
+					}
+
+					.line {
+						width: calc(100% - 30px);
+						height: 1px;
+						background-color: $primary-green;
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translate(0, -50%);
+					}
+
+					button {
+						display: block;
+						background-color: transparent;
+						border: none;
+						color: $primary-green;
+						font-size: .75rem;
+						text-align: right;
+						width: 100%;
+						padding: 0 0 20px 0;
+					}
+				}
+			}
+		}
 	}
 }

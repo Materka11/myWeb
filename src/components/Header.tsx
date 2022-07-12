@@ -126,6 +126,31 @@ function Header({ setClassNoScroll }: NoScroll) {
 			</span>
 			<span className="scroll" />
 			<div className="scroll" />
+			<div className="menuDesktop">
+				<span className="headerMenu">MENU</span>
+				<div className="menuDesktopFixed">
+					<div className="subMenu">
+						<div className="dot" />
+						<div className="line" />
+						<button>Home</button>
+					</div>
+					<div className="subMenu">
+						<div className="dot" />
+						<div className="line" />
+						<button>About Me</button>
+					</div>
+					<div className="subMenu">
+						<div className="dot" />
+						<div className="line" />
+						<button>Work</button>
+					</div>
+					<div className="subMenu">
+						<div className="dot" />
+						<div className="line" />
+						<button>Contact</button>
+					</div>
+				</div>
+			</div>
 			<Menu classMenu={classMenu} handleClickMenu={handleClickMenu} />
 		</div>
 	);

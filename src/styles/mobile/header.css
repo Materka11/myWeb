@@ -328,4 +328,7 @@
   position: absolute;
   top: 655px;
   left: 50%;
+}
+.header .menuDesktop {
+  display: none;
 }/*# sourceMappingURL=header.css.map */
