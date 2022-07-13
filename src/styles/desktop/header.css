@@ -20,6 +20,12 @@
     left: 65%;
     top: 170px;
   }
+  .header .bust .head .face.shadow {
+    display: block;
+    top: -310px;
+    z-index: 0;
+    background-color: transparent;
+  }
   .header .background {
     height: 200px;
     width: 700px;

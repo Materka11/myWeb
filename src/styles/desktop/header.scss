@@ -23,6 +23,13 @@
 			.head {
 				left: 65%;
 				top: 170px;
+
+				.face.shadow {
+					display: block;
+					top: -310px;
+					z-index: 0;
+					background-color: transparent;
+				}
 			}
 		}
 		.background {

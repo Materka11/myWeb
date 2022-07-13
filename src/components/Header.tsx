@@ -64,6 +64,10 @@ function Header({ setClassNoScroll }: NoScroll) {
 			'rotateX(calc(-15deg * ' + rotXHead + '))  rotateY(calc(-15deg * ' + rotYHead + ')) translate(-50%, 0)'
 	};
 
+	const styleShadow = {
+		boxShadow: `${rotXHead * 50}px ${rotYHead * -50}px 20px 0px rgba(66, 68, 90, 0.30)`
+	};
+
 	const handleClickMenu = () => {
 		if (!isToggledMenu) {
 			setClassMenu('active');
@@ -94,7 +98,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 			</nav>
 			<div className="bust">
 				<div style={styleHead} className="head">
-					<div className="hair" />
+					<div style={styleShadow} className="hair" />
 					<div className="face">
 						<div className="eyebrows left" />
 						<div className="eyebrows right" />
@@ -109,6 +113,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 						<div className="nose" />
 						<div className="mouth" />
 					</div>
+
 					<div className="ears left">
 						<div className="line" />
 					</div>
@@ -117,7 +122,8 @@ function Header({ setClassNoScroll }: NoScroll) {
 					</div>
 					<div className="neck left" />
 					<div className="neck right" />
-					<div className="body" />
+					<div style={styleShadow} className="face shadow" />
+					<div style={styleShadow} className="body" />
 				</div>
 			</div>
 			<img className="background" src={background} alt="background" />
