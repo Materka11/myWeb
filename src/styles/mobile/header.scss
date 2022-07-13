@@ -153,33 +153,32 @@
 				}
 
 				.eyes {
-					width: 10px;
-					height: 10px;
 					background-color: $white;
-					// border: 5px solid $primary-green;
-					// border-radius: 50%;
-					top: 70px;
-				}
-
-				.eyes::before {
-					content: '';
-					position: absolute;
-					top: 50%;
-					left: 12px;
-					transform: translate(-50%, -50%);
-					width: 10px;
-					height: 10px;
-					background: $white;
+					width: 40px;
+					height: 25px;
 					border-radius: 50%;
-					border: 5px solid $primary-green;
+					top: 65px;
+
+					.ball {
+						background-color: transparent;
+						width: 20px;
+						height: 20px;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						border-radius: 50%;
+						border: 6px solid $primary-green;
+						box-sizing: border-box;
+					}
 				}
 
 				.eyes.left {
-					left: 39px;
+					left: 30px;
 				}
 
 				.eyes.right {
-					right: 52px;
+					right: 30px;
 				}
 
 				.lowerEyelid {

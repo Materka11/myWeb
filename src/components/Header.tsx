@@ -13,10 +13,8 @@ interface NoScroll {
 }
 
 function Header({ setClassNoScroll }: NoScroll) {
-	const [ xEye, setXEye ] = useState(0);
-	const [ yEye, setYEye ] = useState(0);
-	const [ radianEye, setRadianEye ] = useState(0);
-	const [ rotEye, setRotEye ] = useState(0);
+	const [ xEye, setXEye ] = useState('');
+	const [ yEye, setYEye ] = useState('');
 
 	const [ xHead, setXHead ] = useState(0);
 	const [ yHead, setYHead ] = useState(0);
@@ -34,15 +32,14 @@ function Header({ setClassNoScroll }: NoScroll) {
 		() => {
 			const update = (e: MouseEvent) => {
 				const { innerWidth, innerHeight } = window;
+				const { clientX, clientY } = e;
 
 				if (innerWidth >= 1440) {
-					setXEye(eyesRef.current.offsetLeft + eyesRef.current.offsetWidth / 2);
-					setYEye(eyesRef.current.offsetTop + eyesRef.current.offsetHeight / 2);
-					setRadianEye(Math.atan2(e.clientX - xEye, e.clientY - yEye));
-					setRotEye(radianEye * (180 / Math.PI) * -1 - 270);
+					setXEye(clientX * 100 / innerWidth + '%');
+					setYEye(clientY * 100 / innerHeight + '%');
 
-					setXHead(xHead + (e.clientX - xHead) * 0.15);
-					setYHead(yHead + (e.clientY - yHead) * 0.15);
+					setXHead(xHead + (clientX - xHead) * 0.15);
+					setYHead(yHead + (clientY - yHead) * 0.15);
 					setRotXHead(xHead / innerWidth * -2 + 1);
 					setRotYHead(yHead / innerHeight * 2 - 1);
 				}
@@ -53,11 +50,13 @@ function Header({ setClassNoScroll }: NoScroll) {
 				window.removeEventListener('mousemove', update);
 			};
 		},
-		[ radianEye ]
+		[ xEye, yEye ]
 	);
 
 	const styleEyes = {
-		transform: 'rotate(' + rotEye + 'deg)'
+		left: xEye,
+		top: yEye,
+		transform: `translate(-${xEye}, -${yEye})`
 	};
 
 	const styleHead = {
@@ -99,8 +98,12 @@ function Header({ setClassNoScroll }: NoScroll) {
 					<div className="face">
 						<div className="eyebrows left" />
 						<div className="eyebrows right" />
-						<div ref={eyesRef} style={styleEyes} className={`eyes left`} />
-						<div ref={eyesRef} style={styleEyes} className={`eyes right`} />
+						<div className={`eyes left`}>
+							<div ref={eyesRef} style={styleEyes} className="ball" />
+						</div>
+						<div className={`eyes right`}>
+							<div ref={eyesRef} style={styleEyes} className="ball" />
+						</div>
 						<div className="lowerEyelid left" />
 						<div className="lowerEyelid right" />
 						<div className="nose" />
