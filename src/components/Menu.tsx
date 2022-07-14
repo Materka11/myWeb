@@ -9,17 +9,13 @@ import '../styles/mobile/menu.css';
 
 import { BsGithub, BsInstagram, BsFacebook } from 'react-icons/bs';
 
-function Menu({ classMenu, handleClickMenu }: { classMenu: string; handleClickMenu: () => void }) {
-	const scrollToComponent = (value: number) => {
-		const { innerHeight } = window;
-		setTimeout(() => {
-			window.scrollTo({
-				top: innerHeight * value + 100,
-				behavior: 'smooth'
-			});
-		}, 0);
-	};
+interface Menu {
+	classMenu: string;
+	handleClickMenu: () => void;
+	scrollToComponent: (value: number) => void;
+}
 
+function Menu({ classMenu, handleClickMenu, scrollToComponent }: Menu) {
 	return (
 		<div className={`menu ${classMenu}`}>
 			<div className="socialLink">

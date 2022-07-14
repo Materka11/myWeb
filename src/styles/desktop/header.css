@@ -82,6 +82,7 @@
   .header .menuDesktop .menuDesktopFixed {
     position: fixed;
     width: 100px;
+    z-index: 10000;
   }
   .header .menuDesktop .menuDesktopFixed .subMenu {
     margin: 5px 0;

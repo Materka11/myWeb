@@ -96,6 +96,7 @@
 			.menuDesktopFixed {
 				position: fixed;
 				width: 100px;
+				z-index: 10000;
 
 				.subMenu {
 					margin: 5px 0;

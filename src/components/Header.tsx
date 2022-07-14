@@ -84,6 +84,16 @@ function Header({ setClassNoScroll }: NoScroll) {
 		}
 	};
 
+	const scrollToComponent = (value: number) => {
+		const { innerHeight, scrollTo } = window;
+		setTimeout(() => {
+			scrollTo({
+				top: innerHeight * value + 100,
+				behavior: 'smooth'
+			});
+		}, 0);
+	};
+
 	return (
 		<div className="header">
 			<nav className={classNav}>
@@ -141,26 +151,26 @@ function Header({ setClassNoScroll }: NoScroll) {
 					<div className="subMenu">
 						<div className="dot" />
 						<div className="line" />
-						<button>Home</button>
+						<button onClick={() => scrollToComponent(0 - 100)}>Home</button>
 					</div>
 					<div className="subMenu">
 						<div className="dot" />
 						<div className="line" />
-						<button>About Me</button>
+						<button onClick={() => scrollToComponent(1)}>About Me</button>
 					</div>
 					<div className="subMenu">
 						<div className="dot" />
 						<div className="line" />
-						<button>Work</button>
+						<button onClick={() => scrollToComponent(2)}>Work</button>
 					</div>
 					<div className="subMenu">
 						<div className="dot" />
 						<div className="line" />
-						<button>Contact</button>
+						<button onClick={() => scrollToComponent(3)}>Contact</button>
 					</div>
 				</div>
 			</div>
-			<Menu classMenu={classMenu} handleClickMenu={handleClickMenu} />
+			<Menu classMenu={classMenu} handleClickMenu={handleClickMenu} scrollToComponent={scrollToComponent} />
 		</div>
 	);
 }
