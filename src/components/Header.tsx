@@ -8,6 +8,8 @@ import Menu from './Menu';
 
 import { FiMessageCircle } from 'react-icons/fi';
 
+import { useHasScrolled } from '../hooks/useHasScrolled';
+
 interface NoScroll {
 	setClassNoScroll: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -27,6 +29,8 @@ function Header({ setClassNoScroll }: NoScroll) {
 	const [ isToggledMenu, setIsToggledMenu ] = useState(false);
 	const [ switchLogo, setSwitchLogo ] = useState(logo);
 	const [ classNav, setClassNav ] = useState('');
+
+	const [ classDotHeader, setClassDotHeader ] = useState('');
 
 	useEffect(
 		() => {
@@ -51,6 +55,16 @@ function Header({ setClassNoScroll }: NoScroll) {
 			};
 		},
 		[ xEye, yEye ]
+	);
+
+	const scrollHeaderHome = useHasScrolled(162);
+
+	useEffect(
+		() => {
+			if (scrollHeaderHome) setClassDotHeader('dot');
+			else if (!scrollHeaderHome) setClassDotHeader('dot scrollDot');
+		},
+		[ scrollHeaderHome ]
 	);
 
 	const styleEyes = {
@@ -149,7 +163,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 				<span className="headerMenu">MENU</span>
 				<div className="menuDesktopFixed">
 					<div className="subMenu">
-						<div className="dot" />
+						<div className={classDotHeader} />
 						<div className="line" />
 						<button onClick={() => scrollToComponent(0 - 100)}>Home</button>
 					</div>

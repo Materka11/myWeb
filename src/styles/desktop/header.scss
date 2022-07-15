@@ -106,7 +106,7 @@
 						width: 15px;
 						height: 15px;
 						background-color: $primary-green;
-						border: 3px solid $primary-green;
+						border: 3.5px solid $primary-green;
 						box-sizing: border-box;
 						transform: rotate(45deg) scale(0.5);
 						position: absolute;
@@ -138,6 +138,11 @@
 
 					button:hover {
 						visibility: visible;
+					}
+
+					.scrollDot {
+						transform: rotate(0deg);
+						background-color: transparent;
 					}
 				}
 

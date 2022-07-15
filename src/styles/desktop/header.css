@@ -93,7 +93,7 @@
     width: 15px;
     height: 15px;
     background-color: #ccf381;
-    border: 3px solid #ccf381;
+    border: 3.5px solid #ccf381;
     box-sizing: border-box;
     transform: rotate(45deg) scale(0.5);
     position: absolute;
@@ -122,6 +122,10 @@
   }
   .header .menuDesktop .menuDesktopFixed .subMenu button:hover {
     visibility: visible;
+  }
+  .header .menuDesktop .menuDesktopFixed .subMenu .scrollDot {
+    transform: rotate(0deg);
+    background-color: transparent;
   }
   .header .menuDesktop .menuDesktopFixed .subMenu:hover button {
     visibility: visible;
