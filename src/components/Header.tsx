@@ -30,8 +30,8 @@ function Header({ setClassNoScroll }: NoScroll) {
 	const [ switchLogo, setSwitchLogo ] = useState(logo);
 	const [ classNav, setClassNav ] = useState('');
 
-	const [ classDotHome, setClassDotHome ] = useState('');
-	const [ classLineHome, setClassLineHome ] = useState('');
+	const [ classDotHome, setClassDotHome ] = useState('dot scrollDot');
+	const [ classLineHome, setClassLineHome ] = useState('line');
 	const [ classButtonHome, setClassButtonHome ] = useState('');
 
 	const [ classDotAboutMe, setClassDotAboutMe ] = useState('');
@@ -78,21 +78,31 @@ function Header({ setClassNoScroll }: NoScroll) {
 				1000
 		)
 	);
+	//between header and about me
 	const scrollHeaderHome = useHasScrolled(276);
 	const scrollHeaderAboutMe = useHasScrolled(265);
 	const scrollHeaderWork = useHasScrolled(252);
 	const scrollHeaderContact = useHasScrolled(240);
 
+	const scrollHeaderNav = useHasScrolled(454);
+
+	//between about me and work
 	const scrollAboutMeHome = useHasScrolled(533);
 	const scrollAboutMeAboutMe = useHasScrolled(523);
 	const scrollAboutMeWork = useHasScrolled(510);
 	const scrollAboutMeContact = useHasScrolled(498);
 
+	const scrollAboutMeNav = useHasScrolled(684);
+
+	//between work and contact
 	const scrollWorkHome = useHasScrolled(761);
 	const scrollWorkAboutMe = useHasScrolled(750);
 	const scrollWorkWork = useHasScrolled(737);
 	const scrollWorkContact = useHasScrolled(725);
 
+	const scrollWorkNav = useHasScrolled(906);
+
+	//between contact and footer
 	const scrollContactHome = useHasScrolled(988);
 	const scrollContactAboutMe = useHasScrolled(977);
 	const scrollContactWork = useHasScrolled(964);
@@ -100,6 +110,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 
 	useEffect(
 		() => {
+			//between header and about me
 			if (scrollHeaderHome) {
 				setClassDotHome('dot colorDot');
 				setClassLineHome('line colorLine');
@@ -140,6 +151,15 @@ function Header({ setClassNoScroll }: NoScroll) {
 				setClassButtonContact('');
 			}
 
+			if (scrollHeaderNav) {
+				setSwitchLogo(logoMenu);
+				setClassNav('white');
+			} else if (!scrollHeaderNav) {
+				setSwitchLogo(logo);
+				setClassNav('');
+			}
+
+			//between about me and work
 			if (scrollAboutMeHome) {
 				setClassDotHome('dot');
 				setClassLineHome('line');
@@ -164,6 +184,12 @@ function Header({ setClassNoScroll }: NoScroll) {
 				setClassButtonContact('');
 			}
 
+			if (scrollAboutMeNav) {
+				setSwitchLogo(logo);
+				setClassNav('');
+			}
+
+			//between work and contact
 			if (scrollWorkHome) {
 				setClassDotHome('dot colorDot');
 				setClassLineHome('line colorLine');
@@ -188,6 +214,12 @@ function Header({ setClassNoScroll }: NoScroll) {
 				setClassButtonContact('colorButton');
 			}
 
+			if (scrollWorkNav) {
+				setSwitchLogo(logoMenu);
+				setClassNav('white');
+			}
+
+			//between contact and footer
 			if (scrollContactHome) {
 				setClassDotHome('dot');
 				setClassLineHome('line');
@@ -212,7 +244,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 				setClassButtonContact('');
 			}
 		},
-		[ window.scrollY ]
+		[ document.documentElement.scrollTop ]
 	);
 
 	const styleEyes = {
