@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
 // Added distance parameter to determine how much
-
 // from the top tell return value is updated.
 export const useHasScrolled = (distance: number) => {
 	// setting initial value to false
@@ -12,9 +11,11 @@ export const useHasScrolled = (distance: number) => {
 		() => {
 			const onScroll = () => {
 				// Logic is false tell user reaches threshold, then true after.
-				const { scrollY } = window;
+				const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
-				const scrollCheckStart = scrollY >= distance;
+				const scrollValuePerMil = Math.round((scrollTop + clientHeight) / scrollHeight * 1000);
+
+				const scrollCheckStart = scrollValuePerMil >= distance;
 
 				if (scrollCheckStart !== scroll) setScroll(scrollCheckStart);
 			};

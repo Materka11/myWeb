@@ -33,10 +33,10 @@
 			}
 		}
 		.background {
-			height: 200px;
-			width: 700px;
-			top: 350px;
-			left: 56%;
+			height: 45vh;
+			width: 60vw;
+			top: 330px;
+			left: 60%;
 		}
 
 		.name {
@@ -110,6 +110,23 @@
 						box-sizing: border-box;
 						transform: rotate(45deg) scale(0.5);
 						position: absolute;
+						transition: all .25s cubic-bezier(.175, .885, .32, 1.3);
+					}
+
+					.scrollDot {
+						transform: rotate(0deg);
+						background-color: transparent;
+					}
+
+					.scrollDotColor {
+						transform: rotate(0deg);
+						background-color: transparent;
+						border: 3.5px solid $primary-purple;
+					}
+
+					.colorDot {
+						background-color: $primary-purple;
+						border: 3.5px solid $primary-purple;
 					}
 
 					.line {
@@ -120,6 +137,10 @@
 						right: 0;
 						top: 50%;
 						transform: translate(0, -50%);
+					}
+
+					.colorLine {
+						background-color: $primary-purple;
 					}
 
 					button {
@@ -140,9 +161,8 @@
 						visibility: visible;
 					}
 
-					.scrollDot {
-						transform: rotate(0deg);
-						background-color: transparent;
+					.colorButton {
+						color: $primary-purple;
 					}
 				}
 

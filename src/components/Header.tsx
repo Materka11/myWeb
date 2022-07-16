@@ -30,7 +30,21 @@ function Header({ setClassNoScroll }: NoScroll) {
 	const [ switchLogo, setSwitchLogo ] = useState(logo);
 	const [ classNav, setClassNav ] = useState('');
 
-	const [ classDotHeader, setClassDotHeader ] = useState('');
+	const [ classDotHome, setClassDotHome ] = useState('');
+	const [ classLineHome, setClassLineHome ] = useState('');
+	const [ classButtonHome, setClassButtonHome ] = useState('');
+
+	const [ classDotAboutMe, setClassDotAboutMe ] = useState('');
+	const [ classLineAboutMe, setClassLineAboutMe ] = useState('');
+	const [ classButtonAboutMe, setClassButtonAboutMe ] = useState('');
+
+	const [ classDotWork, setClassDotWork ] = useState('');
+	const [ classLineWork, setClassLineWork ] = useState('');
+	const [ classButtonWork, setClassButtonWork ] = useState('');
+
+	const [ classDotContact, setClassDotContact ] = useState('');
+	const [ classLineContact, setClassLineContact ] = useState('');
+	const [ classButtonContact, setClassButtonContact ] = useState('');
 
 	useEffect(
 		() => {
@@ -57,14 +71,148 @@ function Header({ setClassNoScroll }: NoScroll) {
 		[ xEye, yEye ]
 	);
 
-	const scrollHeaderHome = useHasScrolled(162);
+	console.log(
+		Math.round(
+			(document.documentElement.scrollTop + document.documentElement.clientHeight) /
+				document.documentElement.scrollHeight *
+				1000
+		)
+	);
+	const scrollHeaderHome = useHasScrolled(276);
+	const scrollHeaderAboutMe = useHasScrolled(265);
+	const scrollHeaderWork = useHasScrolled(252);
+	const scrollHeaderContact = useHasScrolled(240);
+
+	const scrollAboutMeHome = useHasScrolled(533);
+	const scrollAboutMeAboutMe = useHasScrolled(523);
+	const scrollAboutMeWork = useHasScrolled(510);
+	const scrollAboutMeContact = useHasScrolled(498);
+
+	const scrollWorkHome = useHasScrolled(761);
+	const scrollWorkAboutMe = useHasScrolled(750);
+	const scrollWorkWork = useHasScrolled(737);
+	const scrollWorkContact = useHasScrolled(725);
+
+	const scrollContactHome = useHasScrolled(988);
+	const scrollContactAboutMe = useHasScrolled(977);
+	const scrollContactWork = useHasScrolled(964);
+	const scrollContactContact = useHasScrolled(952);
 
 	useEffect(
 		() => {
-			if (scrollHeaderHome) setClassDotHeader('dot');
-			else if (!scrollHeaderHome) setClassDotHeader('dot scrollDot');
+			if (scrollHeaderHome) {
+				setClassDotHome('dot colorDot');
+				setClassLineHome('line colorLine');
+				setClassButtonHome('colorButton');
+			} else if (!scrollHeaderHome) {
+				setClassDotHome('dot scrollDot');
+				setClassLineHome('line');
+				setClassButtonHome('');
+			}
+
+			if (scrollHeaderAboutMe) {
+				setClassDotAboutMe('dot scrollDotColor');
+				setClassLineAboutMe('line colorLine');
+				setClassButtonAboutMe('colorButton');
+			} else if (!scrollHeaderAboutMe) {
+				setClassDotAboutMe('dot');
+				setClassLineAboutMe('line ');
+				setClassButtonAboutMe('');
+			}
+
+			if (scrollHeaderWork) {
+				setClassDotWork('dot colorDot');
+				setClassLineWork('line colorLine');
+				setClassButtonWork('colorButton');
+			} else if (!scrollHeaderAboutMe) {
+				setClassDotWork('dot');
+				setClassLineWork('line ');
+				setClassButtonWork('');
+			}
+
+			if (scrollHeaderContact) {
+				setClassDotContact('dot colorDot');
+				setClassLineContact('line colorLine');
+				setClassButtonContact('colorButton');
+			} else if (!scrollHeaderContact) {
+				setClassDotContact('dot');
+				setClassLineContact('line ');
+				setClassButtonContact('');
+			}
+
+			if (scrollAboutMeHome) {
+				setClassDotHome('dot');
+				setClassLineHome('line');
+				setClassButtonHome('');
+			}
+
+			if (scrollAboutMeAboutMe) {
+				setClassDotAboutMe('dot');
+				setClassLineAboutMe('line');
+				setClassButtonAboutMe('');
+			}
+
+			if (scrollAboutMeWork) {
+				setClassDotWork('dot scrollDot');
+				setClassLineWork('line');
+				setClassButtonWork('');
+			}
+
+			if (scrollAboutMeContact) {
+				setClassDotContact('dot');
+				setClassLineContact('line');
+				setClassButtonContact('');
+			}
+
+			if (scrollWorkHome) {
+				setClassDotHome('dot colorDot');
+				setClassLineHome('line colorLine');
+				setClassButtonHome('colorButton');
+			}
+
+			if (scrollWorkAboutMe) {
+				setClassDotAboutMe('dot colorDot');
+				setClassLineAboutMe('line colorLine');
+				setClassButtonAboutMe('colorButton');
+			}
+
+			if (scrollWorkWork) {
+				setClassDotWork('dot colorDot');
+				setClassLineWork('line colorLine');
+				setClassButtonWork('colorButton');
+			}
+
+			if (scrollWorkContact) {
+				setClassDotContact('dot scrollDotColor');
+				setClassLineContact('line colorLine');
+				setClassButtonContact('colorButton');
+			}
+
+			if (scrollContactHome) {
+				setClassDotHome('dot');
+				setClassLineHome('line');
+				setClassButtonHome('');
+			}
+
+			if (scrollContactAboutMe) {
+				setClassDotAboutMe('dot');
+				setClassLineAboutMe('line');
+				setClassButtonAboutMe('');
+			}
+
+			if (scrollContactWork) {
+				setClassDotWork('dot');
+				setClassLineWork('line');
+				setClassButtonWork('');
+			}
+
+			if (scrollContactContact) {
+				setClassDotContact('dot');
+				setClassLineContact('line');
+				setClassButtonContact('');
+			}
 		},
-		[ scrollHeaderHome ]
+		[ window.scrollY ]
 	);
 
 	const styleEyes = {
@@ -163,24 +311,32 @@ function Header({ setClassNoScroll }: NoScroll) {
 				<span className="headerMenu">MENU</span>
 				<div className="menuDesktopFixed">
 					<div className="subMenu">
-						<div className={classDotHeader} />
-						<div className="line" />
-						<button onClick={() => scrollToComponent(0 - 100)}>Home</button>
+						<div className={classDotHome} />
+						<div className={classLineHome} />
+						<button className={classButtonHome} onClick={() => scrollToComponent(0 - 100)}>
+							Home
+						</button>
 					</div>
 					<div className="subMenu">
-						<div className="dot" />
-						<div className="line" />
-						<button onClick={() => scrollToComponent(1)}>About Me</button>
+						<div className={classDotAboutMe} />
+						<div className={classLineAboutMe} />
+						<button className={classButtonAboutMe} onClick={() => scrollToComponent(1)}>
+							About Me
+						</button>
 					</div>
 					<div className="subMenu">
-						<div className="dot" />
-						<div className="line" />
-						<button onClick={() => scrollToComponent(2)}>Work</button>
+						<div className={classDotWork} />
+						<div className={classLineWork} />
+						<button className={classButtonWork} onClick={() => scrollToComponent(2)}>
+							Work
+						</button>
 					</div>
 					<div className="subMenu">
-						<div className="dot" />
-						<div className="line" />
-						<button onClick={() => scrollToComponent(3)}>Contact</button>
+						<div className={classDotContact} />
+						<div className={classLineContact} />
+						<button className={classButtonContact} onClick={() => scrollToComponent(3)}>
+							Contact
+						</button>
 					</div>
 				</div>
 			</div>
