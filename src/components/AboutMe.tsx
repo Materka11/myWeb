@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import '../styles/mobile/aboutMe.css';
 import '../styles/desktop/aboutMe.css';
@@ -6,10 +6,29 @@ import '../styles/desktop/aboutMe.css';
 import circles from '../img/Component 6 – 1@2x.png';
 import stairs from '../img/Component 7 – 1@2x.png';
 
+import { useHasScrolled } from '../hooks/useHasScrolled';
+
 function AboutMe() {
+	const [ classContainer, setClassContainer ] = useState('');
+
+	const scrollAboutMe = useHasScrolled(440);
+
+	useEffect(
+		() => {
+			const { innerWidth } = window;
+			if (innerWidth >= 1440) {
+				if (scrollAboutMe) {
+					setClassContainer('active');
+				} else if (!scrollAboutMe) {
+					setClassContainer('');
+				}
+			}
+		},
+		[ document.documentElement.scrollTop ]
+	);
 	return (
 		<div className="aboutMe">
-			<div className="container">
+			<div className={`container ${classContainer}`}>
 				<span>History</span>
 				<p>
 					I started learning about the frontend from October 2017. Later I tested my knowledge on various
@@ -18,7 +37,7 @@ function AboutMe() {
 					library, React. This is how I learned React and started my first project based on this technology.
 				</p>
 			</div>
-			<div className="container skill">
+			<div className={`container skill ${classContainer}`}>
 				<span>Skill</span>
 				<ul>
 					<li>Very good knowledge of HTML5, CSS3 and JavaScript (ES6)</li>
