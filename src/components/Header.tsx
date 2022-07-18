@@ -34,16 +34,16 @@ function Header({ setClassNoScroll }: NoScroll) {
 	const [ classLineHome, setClassLineHome ] = useState('line');
 	const [ classButtonHome, setClassButtonHome ] = useState('');
 
-	const [ classDotAboutMe, setClassDotAboutMe ] = useState('');
-	const [ classLineAboutMe, setClassLineAboutMe ] = useState('');
+	const [ classDotAboutMe, setClassDotAboutMe ] = useState('dot');
+	const [ classLineAboutMe, setClassLineAboutMe ] = useState('line');
 	const [ classButtonAboutMe, setClassButtonAboutMe ] = useState('');
 
-	const [ classDotWork, setClassDotWork ] = useState('');
-	const [ classLineWork, setClassLineWork ] = useState('');
+	const [ classDotWork, setClassDotWork ] = useState('dot');
+	const [ classLineWork, setClassLineWork ] = useState('line');
 	const [ classButtonWork, setClassButtonWork ] = useState('');
 
-	const [ classDotContact, setClassDotContact ] = useState('');
-	const [ classLineContact, setClassLineContact ] = useState('');
+	const [ classDotContact, setClassDotContact ] = useState('dot');
+	const [ classLineContact, setClassLineContact ] = useState('line');
 	const [ classButtonContact, setClassButtonContact ] = useState('');
 
 	useEffect(
@@ -110,138 +110,142 @@ function Header({ setClassNoScroll }: NoScroll) {
 
 	useEffect(
 		() => {
-			//between header and about me
-			if (scrollHeaderHome) {
-				setClassDotHome('dot colorDot');
-				setClassLineHome('line colorLine');
-				setClassButtonHome('colorButton');
-			} else if (!scrollHeaderHome) {
-				setClassDotHome('dot scrollDot');
-				setClassLineHome('line');
-				setClassButtonHome('');
-			}
+			const { innerWidth } = window;
 
-			if (scrollHeaderAboutMe) {
-				setClassDotAboutMe('dot scrollDotColor');
-				setClassLineAboutMe('line colorLine');
-				setClassButtonAboutMe('colorButton');
-			} else if (!scrollHeaderAboutMe) {
-				setClassDotAboutMe('dot');
-				setClassLineAboutMe('line ');
-				setClassButtonAboutMe('');
-			}
+			if (innerWidth >= 1440) {
+				//between header and about me
+				if (scrollHeaderHome) {
+					setClassDotHome('dot colorDot');
+					setClassLineHome('line colorLine');
+					setClassButtonHome('colorButton');
+				} else if (!scrollHeaderHome) {
+					setClassDotHome('dot scrollDot');
+					setClassLineHome('line');
+					setClassButtonHome('');
+				}
 
-			if (scrollHeaderWork) {
-				setClassDotWork('dot colorDot');
-				setClassLineWork('line colorLine');
-				setClassButtonWork('colorButton');
-			} else if (!scrollHeaderAboutMe) {
-				setClassDotWork('dot');
-				setClassLineWork('line ');
-				setClassButtonWork('');
-			}
+				if (scrollHeaderAboutMe) {
+					setClassDotAboutMe('dot scrollDotColor');
+					setClassLineAboutMe('line colorLine');
+					setClassButtonAboutMe('colorButton');
+				} else if (!scrollHeaderAboutMe) {
+					setClassDotAboutMe('dot');
+					setClassLineAboutMe('line ');
+					setClassButtonAboutMe('');
+				}
 
-			if (scrollHeaderContact) {
-				setClassDotContact('dot colorDot');
-				setClassLineContact('line colorLine');
-				setClassButtonContact('colorButton');
-			} else if (!scrollHeaderContact) {
-				setClassDotContact('dot');
-				setClassLineContact('line ');
-				setClassButtonContact('');
-			}
+				if (scrollHeaderWork) {
+					setClassDotWork('dot colorDot');
+					setClassLineWork('line colorLine');
+					setClassButtonWork('colorButton');
+				} else if (!scrollHeaderAboutMe) {
+					setClassDotWork('dot');
+					setClassLineWork('line ');
+					setClassButtonWork('');
+				}
 
-			if (scrollHeaderNav) {
-				setSwitchLogo(logoMenu);
-				setClassNav('white');
-			} else if (!scrollHeaderNav) {
-				setSwitchLogo(logo);
-				setClassNav('');
-			}
+				if (scrollHeaderContact) {
+					setClassDotContact('dot colorDot');
+					setClassLineContact('line colorLine');
+					setClassButtonContact('colorButton');
+				} else if (!scrollHeaderContact) {
+					setClassDotContact('dot');
+					setClassLineContact('line ');
+					setClassButtonContact('');
+				}
 
-			//between about me and work
-			if (scrollAboutMeHome) {
-				setClassDotHome('dot');
-				setClassLineHome('line');
-				setClassButtonHome('');
-			}
+				if (scrollHeaderNav) {
+					setSwitchLogo(logoMenu);
+					setClassNav('white');
+				} else if (!scrollHeaderNav) {
+					setSwitchLogo(logo);
+					setClassNav('');
+				}
 
-			if (scrollAboutMeAboutMe) {
-				setClassDotAboutMe('dot');
-				setClassLineAboutMe('line');
-				setClassButtonAboutMe('');
-			}
+				//between about me and work
+				if (scrollAboutMeHome) {
+					setClassDotHome('dot');
+					setClassLineHome('line');
+					setClassButtonHome('');
+				}
 
-			if (scrollAboutMeWork) {
-				setClassDotWork('dot scrollDot');
-				setClassLineWork('line');
-				setClassButtonWork('');
-			}
+				if (scrollAboutMeAboutMe) {
+					setClassDotAboutMe('dot');
+					setClassLineAboutMe('line');
+					setClassButtonAboutMe('');
+				}
 
-			if (scrollAboutMeContact) {
-				setClassDotContact('dot');
-				setClassLineContact('line');
-				setClassButtonContact('');
-			}
+				if (scrollAboutMeWork) {
+					setClassDotWork('dot scrollDot');
+					setClassLineWork('line');
+					setClassButtonWork('');
+				}
 
-			if (scrollAboutMeNav) {
-				setSwitchLogo(logo);
-				setClassNav('');
-			}
+				if (scrollAboutMeContact) {
+					setClassDotContact('dot');
+					setClassLineContact('line');
+					setClassButtonContact('');
+				}
 
-			//between work and contact
-			if (scrollWorkHome) {
-				setClassDotHome('dot colorDot');
-				setClassLineHome('line colorLine');
-				setClassButtonHome('colorButton');
-			}
+				if (scrollAboutMeNav) {
+					setSwitchLogo(logo);
+					setClassNav('');
+				}
 
-			if (scrollWorkAboutMe) {
-				setClassDotAboutMe('dot colorDot');
-				setClassLineAboutMe('line colorLine');
-				setClassButtonAboutMe('colorButton');
-			}
+				//between work and contact
+				if (scrollWorkHome) {
+					setClassDotHome('dot colorDot');
+					setClassLineHome('line colorLine');
+					setClassButtonHome('colorButton');
+				}
 
-			if (scrollWorkWork) {
-				setClassDotWork('dot colorDot');
-				setClassLineWork('line colorLine');
-				setClassButtonWork('colorButton');
-			}
+				if (scrollWorkAboutMe) {
+					setClassDotAboutMe('dot colorDot');
+					setClassLineAboutMe('line colorLine');
+					setClassButtonAboutMe('colorButton');
+				}
 
-			if (scrollWorkContact) {
-				setClassDotContact('dot scrollDotColor');
-				setClassLineContact('line colorLine');
-				setClassButtonContact('colorButton');
-			}
+				if (scrollWorkWork) {
+					setClassDotWork('dot colorDot');
+					setClassLineWork('line colorLine');
+					setClassButtonWork('colorButton');
+				}
 
-			if (scrollWorkNav) {
-				setSwitchLogo(logoMenu);
-				setClassNav('white');
-			}
+				if (scrollWorkContact) {
+					setClassDotContact('dot scrollDotColor');
+					setClassLineContact('line colorLine');
+					setClassButtonContact('colorButton');
+				}
 
-			//between contact and footer
-			if (scrollContactHome) {
-				setClassDotHome('dot');
-				setClassLineHome('line');
-				setClassButtonHome('');
-			}
+				if (scrollWorkNav) {
+					setSwitchLogo(logoMenu);
+					setClassNav('white');
+				}
 
-			if (scrollContactAboutMe) {
-				setClassDotAboutMe('dot');
-				setClassLineAboutMe('line');
-				setClassButtonAboutMe('');
-			}
+				//between contact and footer
+				if (scrollContactHome) {
+					setClassDotHome('dot');
+					setClassLineHome('line');
+					setClassButtonHome('');
+				}
 
-			if (scrollContactWork) {
-				setClassDotWork('dot');
-				setClassLineWork('line');
-				setClassButtonWork('');
-			}
+				if (scrollContactAboutMe) {
+					setClassDotAboutMe('dot');
+					setClassLineAboutMe('line');
+					setClassButtonAboutMe('');
+				}
 
-			if (scrollContactContact) {
-				setClassDotContact('dot');
-				setClassLineContact('line');
-				setClassButtonContact('');
+				if (scrollContactWork) {
+					setClassDotWork('dot');
+					setClassLineWork('line');
+					setClassButtonWork('');
+				}
+
+				if (scrollContactContact) {
+					setClassDotContact('dot');
+					setClassLineContact('line');
+					setClassButtonContact('');
+				}
 			}
 		},
 		[ document.documentElement.scrollTop ]

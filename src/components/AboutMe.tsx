@@ -1,6 +1,10 @@
 import React from 'react';
 
 import '../styles/mobile/aboutMe.css';
+import '../styles/desktop/aboutMe.css';
+
+import circles from '../img/Component 6 – 1@2x.png';
+import stairs from '../img/Component 7 – 1@2x.png';
 
 function AboutMe() {
 	return (
@@ -28,6 +32,10 @@ function AboutMe() {
 					<li>Basic design skills in Adobe XD</li>
 				</ul>
 			</div>
+			<img className="circle1" src={circles} alt="background element" />
+			<img className="circle2" src={circles} alt="background element" />
+			<img className="stairs1 stairs" src={stairs} alt="background element" />
+			<img className="stairs2 stairs" src={stairs} alt="background element" />
 		</div>
 	);
 }
