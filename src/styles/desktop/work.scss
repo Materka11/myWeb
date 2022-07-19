@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+@media (min-width: 1440px) {
+	.work {
+		background-color: $primary-purple;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.containerOuter {
+			height: 70vh;
+			width: 70vw;
+			box-shadow: 0 0 100px rgba(0, 0, 0, .3);
+			perspective: 1000px;
+			position: relative;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+@media (min-width: 1440px) {
+  .work {
+    background-color: #4831d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .work .containerOuter {
+    height: 70vh;
+    width: 70vw;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+    perspective: 1000px;
+    position: relative;
+  }
+}/*# sourceMappingURL=work.css.map */

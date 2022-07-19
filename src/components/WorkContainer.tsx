@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../styles/mobile/workContainer.css';
+import '../styles/desktop/workContainer.css';
 import { BsArrowRight } from 'react-icons/bs';
 
 interface WorkContainer {
@@ -10,26 +11,37 @@ interface WorkContainer {
 	isCodeOrWork: string;
 	backgroundColor: string;
 	link: string;
+	classContainer?: string;
 }
 
-function WorkContainer({ title, description, date, isCodeOrWork, backgroundColor, link }: WorkContainer) {
+function WorkContainer({
+	title,
+	description,
+	date,
+	isCodeOrWork,
+	backgroundColor,
+	link,
+	classContainer
+}: WorkContainer) {
 	let styleContainer;
 	let styleButton;
 
-	if (backgroundColor === 'purple') {
+	const { innerWidth } = window;
+
+	if (backgroundColor === 'purple' && innerWidth < 1440) {
 		styleContainer = { backgroundColor: '#4831d4', color: '#ffffff' };
 	} else if (backgroundColor === 'white') {
 		styleContainer = { backgroundColor: '#ffffff', color: '#4831d4' };
 	}
 
-	if (backgroundColor === 'purple') {
+	if (backgroundColor === 'purple' && innerWidth < 1440) {
 		styleButton = { border: '2px solid #ffffff' };
 	} else if (backgroundColor === 'white') {
 		styleButton = { border: '2px solid #4831d4' };
 	}
 
 	return (
-		<div style={styleContainer} className="container">
+		<div style={styleContainer} className={`container ${classContainer}`}>
 			<div className="text">
 				<span>{title}</span>
 				<p>

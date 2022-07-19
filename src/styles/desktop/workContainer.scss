@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+@media (min-width: 1440px) {
+	.work {
+		.container {
+			width: 50%;
+			background-color: $white;
+			color: $primary-purple;
+			border: .5px solid $primary-purple;
+			cursor: pointer;
+			transition: all 1s;
+			transform: rotateX(10deg);
+			transform-origin: center left;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			height: 100%;
+
+			a {
+				border: 2px solid $primary-purple;
+				bottom: 50px;
+			}
+		}
+		.container:nth-child(1) {
+			left: 0;
+		}
+
+		.active {
+			transform: translateX(-100%) translateZ(-10px) rotateX(10deg);
+		}
+
+		.active2 {
+			transform: translateX(-100%) translateZ(-20px) rotateX(10deg);
+		}
+
+		.active3 {
+			transform: translateX(-100%) translateZ(-30px) rotateX(10deg);
+		}
+	}
+}

@@ -12,6 +12,7 @@
 			overflow: hidden;
 			transform: translate(0, 200px) scale(0.1);
 			opacity: 0;
+			border: none;
 			transition: all .75s cubic-bezier(.175, .885, .32, 1.3);
 
 			span {
