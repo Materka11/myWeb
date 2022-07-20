@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import '../styles/mobile/workContainer.css';
 import '../styles/desktop/workContainer.css';
+
 import { BsArrowRight } from 'react-icons/bs';
+
+import { useHasScrolled } from '../hooks/useHasScrolled';
 
 interface WorkContainer {
 	title: string;
@@ -23,10 +26,27 @@ function WorkContainer({
 	link,
 	classContainer
 }: WorkContainer) {
-	let styleContainer;
-	let styleButton;
+	const [ classContainerTransition, setClassContainerTransition ] = useState('');
+
+	const scrollWork = useHasScrolled(635);
 
 	const { innerWidth } = window;
+
+	useEffect(
+		() => {
+			if (innerWidth >= 1440) {
+				if (scrollWork) {
+					setClassContainerTransition('transition');
+				} else if (!scrollWork) {
+					setClassContainerTransition('');
+				}
+			}
+		},
+		[ document.documentElement.scrollTop ]
+	);
+
+	let styleContainer;
+	let styleButton;
 
 	if (backgroundColor === 'purple' && innerWidth < 1440) {
 		styleContainer = { backgroundColor: '#4831d4', color: '#ffffff' };
@@ -41,7 +61,7 @@ function WorkContainer({
 	}
 
 	return (
-		<div style={styleContainer} className={`container ${classContainer}`}>
+		<div style={styleContainer} className={`container ${classContainer} ${classContainerTransition}`}>
 			<div className="text">
 				<span>{title}</span>
 				<p>
