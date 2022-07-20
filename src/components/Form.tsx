@@ -1,11 +1,28 @@
-import React, { SyntheticEvent, useState, useReducer } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import '../styles/mobile/form.css';
+import '../styles/desktop/form.css';
 import { BsArrowRight } from 'react-icons/bs';
 
 import { useForm } from '../hooks/useForm';
+import { useHasScrolled } from '../hooks/useHasScrolled';
 
 function Form() {
+	const [ classText, setClassText ] = useState('');
+	const scrollContact = useHasScrolled(844);
+	useEffect(
+		() => {
+			const { innerWidth } = window;
+			if (innerWidth >= 1440) {
+				if (scrollContact) {
+					setClassText('active');
+				} else if (!scrollContact) {
+					setClassText('');
+				}
+			}
+		},
+		[ document.documentElement.scrollTop ]
+	);
 	const initialState = {
 		name: '',
 		email: '',
@@ -17,9 +34,10 @@ function Form() {
 	async function sendMessageCallback() {
 		//send values to email
 	}
+
 	return (
 		<div className="form">
-			<div className="text">
+			<div className={`text ${classText}`}>
 				<span>Send me a message!</span>
 				<p>Got a question or proposal, or just want to say hello? Go ahead.</p>
 			</div>

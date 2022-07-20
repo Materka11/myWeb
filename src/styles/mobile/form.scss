@@ -1,41 +1,35 @@
 @import '../variables.scss';
+
 .form {
 	height: 100vh;
 	position: relative;
 	background-color: #f9f9f9;
-
 	.text {
 		position: absolute;
 		top: 15%;
 		margin: 0 30px;
 		color: $primary-purple;
-
 		span {
 			font-weight: bold;
 			font-size: 1.75rem;
 		}
-
 		p {
 			font-size: 1rem;
 			margin: 13px 0;
 		}
 	}
-
 	form {
 		position: absolute;
 		top: 30%;
 		margin: 0 30px;
 		width: calc(100% - 90px);
-
 		fieldset {
 			border: none;
 			padding: 0;
 			margin: 0;
 			color: rgba(61, 21, 95, 0.5);
-
 			.formRow {
 				margin: 10px 0;
-
 				span {
 					font-size: 0.6875rem;
 				}
@@ -47,17 +41,15 @@
 					width: 100%;
 					padding: 10px 10px;
 				}
-
 				textarea {
 					resize: none;
 					min-height: 50px;
 				}
 			}
 		}
-
 		button {
 			position: absolute;
-			width: calc(100% + 20px);
+			width: 300px;
 			height: 60px;
 			border: 2px solid $primary-purple;
 			background-color: $primary-purple;
@@ -66,7 +58,8 @@
 			bottom: -80px;
 			font-weight: bold;
 			overflow: hidden;
-
+			left: 50%;
+			transform: translateX(-50%);
 			span {
 				position: absolute;
 				left: 40%;
@@ -74,7 +67,6 @@
 				top: 50%;
 				text-transform: uppercase;
 			}
-
 			.icon {
 				color: $white;
 				font-size: 2rem;
@@ -83,7 +75,6 @@
 				transform: translate(-50%, -50%);
 				top: 50%;
 			}
-
 			.btnDynamic {
 				display: flex;
 				justify-content: center;
@@ -97,13 +88,11 @@
 				transition: all ease .5s;
 				background-color: $white;
 				color: $primary-purple;
-
 				.icon {
 					color: $primary-purple;
 				}
 			}
 		}
-
 		button:hover .btnDynamic {
 			transform: translateX(100%);
 		}

@@ -49,7 +49,7 @@
 }
 .form form button {
   position: absolute;
-  width: calc(100% + 20px);
+  width: 300px;
   height: 60px;
   border: 2px solid #4831d4;
   background-color: #4831d4;
@@ -58,6 +58,8 @@
   bottom: -80px;
   font-weight: bold;
   overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .form form button span {
   position: absolute;
