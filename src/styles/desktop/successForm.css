@@ -1,0 +1,66 @@
+body {
+  background-color: #4831d4;
+}
+body div {
+  color: #ccf381;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+body div h1 {
+  font-size: 2.5rem;
+  top: 20vh;
+  margin: 100px 0 30px;
+}
+body div h2 {
+  font-size: 1.375rem;
+  top: 30vh;
+  margin: 0 0 100px 0;
+}
+body div a {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 300px;
+  height: 60px;
+  background-color: #3d155f;
+  color: #ccf381;
+  font-size: 1rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+body div a span {
+  position: absolute;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  text-transform: uppercase;
+}
+body div a .icon {
+  color: #ccf381;
+  font-size: 2rem;
+  position: absolute;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+body div a .btnDynamic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all ease 0.5s;
+  background-color: #ffffff;
+  color: #4831d4;
+}
+body div a .btnDynamic .icon {
+  color: #4831d4;
+}
+body div a:hover .btnDynamic {
+  transform: translateX(100%);
+}/*# sourceMappingURL=successForm.css.map */

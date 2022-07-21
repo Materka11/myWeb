@@ -4,7 +4,7 @@ import '../styles/mobile/form.css';
 import '../styles/desktop/form.css';
 import { BsArrowRight } from 'react-icons/bs';
 
-import { useForm } from '../hooks/useForm';
+// import { useForm } from '../hooks/useForm';
 import { useHasScrolled } from '../hooks/useHasScrolled';
 
 function Form() {
@@ -23,17 +23,17 @@ function Form() {
 		},
 		[ document.documentElement.scrollTop ]
 	);
-	const initialState = {
-		name: '',
-		email: '',
-		message: ''
-	};
+	// const initialState = {
+	// 	name: '',
+	// 	email: '',
+	// 	message: ''
+	// };
 
-	const { onChange, onSubmit, values } = useForm(sendMessageCallback, initialState);
+	// const { onChange, onSubmit, values } = useForm(sendMessageCallback, initialState);
 
-	async function sendMessageCallback() {
-		//send values to email
-	}
+	// async function sendMessageCallback() {
+	// 	//send values to email
+	// }
 
 	return (
 		<div className="form">
@@ -41,9 +41,11 @@ function Form() {
 				<span>Send me a message!</span>
 				<p>Got a question or proposal, or just want to say hello? Go ahead.</p>
 			</div>
-			<form onSubmit={onSubmit}>
+			{/* <form onSubmit={onSubmit}> */}
+			<form name="contact" method="POST" data-netlify="true" action="/SuccessForm" netlify-honeypot="bot-field">
 				<fieldset>
 					<div className="formRow">
+						<input style={{ display: 'none' }} name="bot-field" />
 						<label>
 							<span>Your Name</span>
 							<br />
@@ -52,7 +54,7 @@ function Form() {
 								id="name"
 								type="text"
 								placeholder="Enter your name"
-								onChange={onChange}
+								// onChange={onChange}
 								required
 								className="input"
 							/>
@@ -68,7 +70,7 @@ function Form() {
 								id="email"
 								type="email"
 								placeholder="Enter your email address"
-								onChange={onChange}
+								// onChange={onChange}
 								required
 								className="input"
 							/>
