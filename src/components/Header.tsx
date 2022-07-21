@@ -56,8 +56,8 @@ function Header({ setClassNoScroll }: NoScroll) {
 					setXEye(clientX * 100 / innerWidth + '%');
 					setYEye(clientY * 100 / innerHeight + '%');
 
-					setXHead(xHead + (clientX - xHead) * 0.15);
-					setYHead(yHead + (clientY - yHead) * 0.15);
+					setXHead((xHead) => xHead + (clientX - xHead) * 0.15);
+					setYHead((yHead) => yHead + (clientY - yHead) * 0.15);
 					setRotXHead(xHead / innerWidth * -2 + 1);
 					setRotYHead(yHead / innerHeight * 2 - 1);
 				}
@@ -71,13 +71,14 @@ function Header({ setClassNoScroll }: NoScroll) {
 		[ xEye, yEye ]
 	);
 
-	console.log(
-		Math.round(
-			(document.documentElement.scrollTop + document.documentElement.clientHeight) /
-				document.documentElement.scrollHeight *
-				1000
-		)
-	);
+	// console.log(
+	// 	Math.round(
+	// 		(document.documentElement.scrollTop + document.documentElement.clientHeight) /
+	// 			document.documentElement.scrollHeight *
+	// 			1000
+	// 	)
+	// );
+
 	//between header and about me
 	const scrollHeaderHome = useHasScrolled(276);
 	const scrollHeaderAboutMe = useHasScrolled(265);
