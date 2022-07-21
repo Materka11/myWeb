@@ -17,10 +17,10 @@ function Work() {
 		if (classContainer2 === '') {
 			setClassContainer2('active');
 			setClassButtonLeft('');
-			setClassButtonRight('none'); //switch to the last slide
 		}
 		if (classContainer2 === 'active') {
 			setClassContainer3('active2');
+			setClassButtonRight('none'); //switch to the last slide
 		}
 		if (classContainer3 === 'active2') {
 			setClassContainer4('active3');
@@ -69,16 +69,16 @@ function Work() {
 					link={'https://github.com/Materka11/ClothingStore'}
 					classContainer={classContainer2}
 				/>
-				{/* <WorkContainer
-					title={'Clothing Store3'}
-					description={'Online store designed with React.'}
-					date={'June 2022'}
-					isCodeOrWork={'code'}
-					backgroundColor={'white'}
-					link={'https://github.com/Materka11/ClothingStore'}
+				<WorkContainer
+					title={'This website'}
+					description={'View the code of this website'}
+					date={'July 2022'}
+					isCodeOrWork={'work'}
+					backgroundColor={'purple'}
+					link={'https://arkadiuszmaterka.netlify.app/'}
 					classContainer={classContainer3}
 				/>
-				<WorkContainer
+				{/* <WorkContainer
 					title={'Clothing Store4'}
 					description={'Online store designed with React.'}
 					date={'June 2022'}
@@ -86,7 +86,7 @@ function Work() {
 					backgroundColor={'white'}
 					link={'https://github.com/Materka11/ClothingStore'}
 					classContainer={classContainer4}
-				/> */}
+				/>  */}
 			</div>
 			<button className={classButtonRight} onClick={handleClickActiveContainer}>
 				<IoArrowUndoSharp className="icon" />
