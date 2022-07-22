@@ -42,18 +42,13 @@ function Form() {
 				<p>Got a question or proposal, or just want to say hello? Go ahead.</p>
 			</div>
 			{/* <form onSubmit={onSubmit}> */}
-			<form
-				name="contact"
-				method="POST"
-				data-netlify="true"
-				action="/SuccessForm.tsx"
-				data-netlify-honeypot="bot-field"
-			>
+			<form name="contact" method="post" data-netlify="true" action="/success" netlify-honeypot="bot-field">
 				<fieldset>
 					<div className="formRow">
 						<div hidden>
 							<input name="bot-field" />
 						</div>
+						<input type="hidden" name="form-name" value="contact" />
 						<label>
 							<span>Your Name</span>
 							<br />
