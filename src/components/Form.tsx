@@ -43,57 +43,56 @@ function Form() {
 			</div>
 			{/* <form onSubmit={onSubmit}> */}
 			<form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
-				<fieldset>
-					<div className="formRow">
-						<div hidden>
-							<input name="bot-field" />
-						</div>
-						<input type="hidden" name="form-name" value="contact" />
-						<label>
-							<span>Your Name</span>
-							<br />
-							<input
-								name="name"
-								id="name"
-								type="text"
-								placeholder="Enter your name"
-								// onChange={onChange}
-								required
-								className="input"
-							/>
-						</label>
+				<div className="formRow">
+					<div hidden>
+						<input name="bot-field" />
 					</div>
-					<br />
-					<div className="formRow">
-						<label>
-							<span>Email Address</span>
-							<br />
-							<input
-								name="email"
-								id="email"
-								type="email"
-								placeholder="Enter your email address"
-								// onChange={onChange}
-								required
-								className="input"
-							/>
-						</label>
-					</div>
-					<br />
-					<div className="formRow">
-						<label>
-							<span>Your Message</span>
-							<br />
-							<textarea
-								name="message"
-								id="message"
-								placeholder="Hi, i think we need a frontend developer for our products at Company X. How soon can you hop on to discuss this?"
-								minLength={20}
-								className="input"
-							/>
-						</label>
-					</div>
-				</fieldset>
+					<input type="hidden" name="form-name" value="contact" />
+					<label>
+						<span>Your Name</span>
+						<br />
+						<input
+							name="name"
+							id="name"
+							type="text"
+							placeholder="Enter your name"
+							// onChange={onChange}
+							required
+							className="input"
+						/>
+					</label>
+				</div>
+				<br />
+				<div className="formRow">
+					<label>
+						<span>Email Address</span>
+						<br />
+						<input
+							name="email"
+							id="email"
+							type="email"
+							placeholder="Enter your email address"
+							// onChange={onChange}
+							required
+							className="input"
+						/>
+					</label>
+				</div>
+				<br />
+				<div className="formRow">
+					<label>
+						<span>Your Message</span>
+						<br />
+						<textarea
+							name="message"
+							id="message"
+							placeholder="Hi, i think we need a frontend developer for our products at Company X. How soon can you hop on to discuss this?"
+							minLength={20}
+							className="input"
+						/>
+					</label>
+				</div>
+
 				<button type="submit">
 					<span>SEND MESSAGE</span>
 					<BsArrowRight className="icon" />

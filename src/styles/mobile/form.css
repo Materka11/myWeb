@@ -23,19 +23,13 @@
   margin: 0 30px;
   width: calc(100% - 90px);
 }
-.form form fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-  color: rgba(61, 21, 95, 0.5);
-}
-.form form fieldset .formRow {
+.form form .formRow {
   margin: 10px 0;
 }
-.form form fieldset .formRow span {
+.form form .formRow span {
   font-size: 0.6875rem;
 }
-.form form fieldset .formRow .input {
+.form form .formRow .input {
   border: none;
   background-color: #f9f9f9;
   border-bottom: 1px solid rgba(61, 21, 95, 0.5);
@@ -43,11 +37,11 @@
   width: 100%;
   padding: 10px 10px;
 }
-.form form fieldset .formRow textarea {
+.form form .formRow textarea {
   resize: none;
   min-height: 50px;
 }
-.form form button {
+.form button {
   position: absolute;
   width: 300px;
   height: 60px;
@@ -61,14 +55,14 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.form form button span {
+.form button span {
   position: absolute;
   left: 40%;
   transform: translate(-50%, -50%);
   top: 50%;
   text-transform: uppercase;
 }
-.form form button .icon {
+.form button .icon {
   color: #ffffff;
   font-size: 2rem;
   position: absolute;
@@ -76,7 +70,7 @@
   transform: translate(-50%, -50%);
   top: 50%;
 }
-.form form button .btnDynamic {
+.form button .btnDynamic {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,9 +84,9 @@
   background-color: #ffffff;
   color: #4831d4;
 }
-.form form button .btnDynamic .icon {
+.form button .btnDynamic .icon {
   color: #4831d4;
 }
-.form form button:hover .btnDynamic {
+.form button button:hover .btnDynamic {
   transform: translateX(100%);
 }/*# sourceMappingURL=form.css.map */
