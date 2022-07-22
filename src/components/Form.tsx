@@ -43,11 +43,11 @@ function Form() {
 			</div>
 			{/* <form onSubmit={onSubmit}> */}
 			<form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
+				<div hidden>
+					<input name="bot-field" />
+				</div>
+				<input type="hidden" name="form-name" value="contact" />
 				<div className="formRow">
-					<div hidden>
-						<input name="bot-field" />
-					</div>
-					<input type="hidden" name="form-name" value="contact" />
 					<label>
 						<span>Your Name</span>
 						<br />
