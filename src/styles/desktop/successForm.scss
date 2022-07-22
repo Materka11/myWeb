@@ -1,9 +1,10 @@
-@import '../styles/variables.scss';
+@import '../variables.scss';
 
-body {
+.wrapper {
 	background-color: $primary-purple;
+	height: 100vh;
 
-	div {
+	.successForm {
 		color: $primary-green;
 		position: absolute;
 		text-align: center;
@@ -20,7 +21,7 @@ body {
 			margin: 0 0 100px 0;
 		}
 
-		a {
+		.backToHome {
 			position: absolute;
 			left: 50%;
 			transform: translate(-50%, 0);

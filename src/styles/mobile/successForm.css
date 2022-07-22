@@ -1,8 +1,8 @@
 @media (max-width: 1440px) {
-  body div h1 {
+  .wrapper .successForm h1 {
     font-size: 1.75rem;
   }
-  body div h2 {
+  .wrapper .successForm h2 {
     font-size: 1rem;
     margin: 0 0 50px;
   }
