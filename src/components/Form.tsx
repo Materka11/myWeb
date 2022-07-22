@@ -42,7 +42,7 @@ function Form() {
 				<p>Got a question or proposal, or just want to say hello? Go ahead.</p>
 			</div>
 			{/* <form onSubmit={onSubmit}> */}
-			<form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
+			<form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field" action="/success">
 				<div hidden>
 					<input name="bot-field" />
 				</div>
