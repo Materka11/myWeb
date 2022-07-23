@@ -35,20 +35,20 @@
 
 			span {
 				position: absolute;
-				left: 55%;
+				left: 50%;
 				transform: translate(-50%, -50%);
 				top: 50%;
 				text-transform: uppercase;
 			}
 
-			.icon {
-				color: $primary-green;
-				font-size: 2rem;
-				position: absolute;
-				left: 20%;
-				transform: translate(-50%, -50%);
-				top: 50%;
-			}
+			// .icon {
+			// 	color: $primary-green;
+			// 	font-size: 2rem;
+			// 	position: absolute;
+			// 	left: 20%;
+			// 	transform: translate(-50%, -50%);
+			// 	top: 50%;
+			// }
 
 			.btnDynamic {
 				display: flex;
@@ -64,9 +64,9 @@
 				background-color: $white;
 				color: $primary-purple;
 
-				.icon {
-					color: $primary-purple;
-				}
+				// .icon {
+				// 	color: $primary-purple;
+				// }
 			}
 		}
 

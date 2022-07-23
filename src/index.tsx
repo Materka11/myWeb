@@ -48,7 +48,7 @@ root.render(
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<App />} />
-				<Route path="success" element={<SuccessForm />} />
+				{/* <Route path="success" element={<SuccessForm />} /> */}
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>
