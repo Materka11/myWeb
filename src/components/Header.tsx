@@ -264,7 +264,7 @@ function Header({ setClassNoScroll }: NoScroll) {
 	};
 
 	const styleShadow = {
-		boxShadow: `${rotXHead * 50}px ${rotYHead * -50}px 20px 0px rgba(66, 68, 90, 0.30)`
+		boxShadow: `${rotXHead * 50}px ${rotYHead * -50}px 20px 0px rgba(66, 68, 90, 0.50)`
 	};
 
 	const handleClickMenu = () => {

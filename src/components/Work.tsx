@@ -73,9 +73,9 @@ function Work() {
 					title={'This website'}
 					description={'View the code of this website'}
 					date={'July 2022'}
-					isCodeOrWork={'work'}
+					isCodeOrWork={'code'}
 					backgroundColor={'purple'}
-					link={'https://arkadiuszmaterka.netlify.app/'}
+					link={'https://github.com/Materka11/myWeb'}
 					classContainer={classContainer3}
 				/>
 				{/* <WorkContainer
