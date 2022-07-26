@@ -1,8 +1,7 @@
 .work {
   height: 100vh;
   overflow: scroll;
-  -ms-overflow-style: none; /* IE 11 */
-  scrollbar-width: none; /* Firefox 64 */
+  overflow: -moz-scrollbars-none;
 }
 .work .containerOuter {
   display: flex;
