@@ -49,15 +49,15 @@ function WorkContainer({
 	let styleButton;
 
 	if (backgroundColor === 'purple' && innerWidth < 1440) {
-		styleContainer = { backgroundColor: '#4831d4', color: '#ffffff' };
+		styleContainer = { backgroundColor: '#5444c1', color: '#ffffff' };
 	} else if (backgroundColor === 'white') {
-		styleContainer = { backgroundColor: '#ffffff', color: '#4831d4' };
+		styleContainer = { backgroundColor: '#ffffff', color: '#5444c1' };
 	}
 
 	if (backgroundColor === 'purple' && innerWidth < 1440) {
 		styleButton = { border: '2px solid #ffffff' };
 	} else if (backgroundColor === 'white') {
-		styleButton = { border: '2px solid #4831d4' };
+		styleButton = { border: '2px solid #5444c1' };
 	}
 
 	return (
