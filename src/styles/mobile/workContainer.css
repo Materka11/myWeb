@@ -25,7 +25,7 @@
   transform: translate(-50%, 0);
   width: 300px;
   height: 60px;
-  background-color: #4831d4;
+  background-color: #5444c1;
   color: #ffffff;
   font-size: 1rem;
   bottom: 130px;
@@ -59,10 +59,10 @@
   z-index: 2;
   transition: all ease 0.5s;
   background-color: #ffffff;
-  color: #4831d4;
+  color: #5444c1;
 }
 .container a .btnDynamic .icon {
-  color: #4831d4;
+  color: #5444c1;
 }
 .container a:hover .btnDynamic {
   transform: translateX(100%);

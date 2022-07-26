@@ -7,7 +7,7 @@
   position: absolute;
   top: 15%;
   margin: 0 30px;
-  color: #4831d4;
+  color: #5444c1;
 }
 .form .text span {
   font-weight: bold;
@@ -45,8 +45,8 @@
   position: absolute;
   width: 300px;
   height: 60px;
-  border: 2px solid #4831d4;
-  background-color: #4831d4;
+  border: 2px solid #5444c1;
+  background-color: #5444c1;
   color: #ffffff;
   font-size: 1rem;
   bottom: -80px;
@@ -82,10 +82,10 @@
   z-index: 2;
   transition: all ease 0.5s;
   background-color: #ffffff;
-  color: #4831d4;
+  color: #5444c1;
 }
 .form button .btnDynamic .icon {
-  color: #4831d4;
+  color: #5444c1;
 }
 .form button button:hover .btnDynamic {
   transform: translateX(100%);

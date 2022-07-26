@@ -18,13 +18,13 @@
   }
   .header .white {
     height: 0px;
-    color: #4831d4;
+    color: #5444c1;
   }
   .header .white .icon {
     color: #000000;
   }
   .header .white a {
-    color: #4831d4;
+    color: #5444c1;
   }
   .header .bust {
     transform: scale(1);
@@ -119,11 +119,11 @@
   .header .menuDesktop .menuDesktopFixed .subMenu .scrollDotColor {
     transform: rotate(0deg);
     background-color: transparent;
-    border: 3.5px solid #4831d4;
+    border: 3.5px solid #5444c1;
   }
   .header .menuDesktop .menuDesktopFixed .subMenu .colorDot {
-    background-color: #4831d4;
-    border: 3.5px solid #4831d4;
+    background-color: #5444c1;
+    border: 3.5px solid #5444c1;
   }
   .header .menuDesktop .menuDesktopFixed .subMenu .line {
     width: calc(100% - 30px);
@@ -135,7 +135,7 @@
     transform: translate(0, -50%);
   }
   .header .menuDesktop .menuDesktopFixed .subMenu .colorLine {
-    background-color: #4831d4;
+    background-color: #5444c1;
   }
   .header .menuDesktop .menuDesktopFixed .subMenu button {
     display: block;
@@ -154,7 +154,7 @@
     visibility: visible;
   }
   .header .menuDesktop .menuDesktopFixed .subMenu .colorButton {
-    color: #4831d4;
+    color: #5444c1;
   }
   .header .menuDesktop .menuDesktopFixed .subMenu:hover button {
     visibility: visible;

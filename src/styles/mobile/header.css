@@ -1,6 +1,6 @@
 .header {
   height: 100vh;
-  background-color: #4831d4;
+  background-color: #5444c1;
   position: relative;
 }
 .header nav {
@@ -8,7 +8,7 @@
   position: fixed;
   width: 100vw;
   z-index: 9999;
-  background: linear-gradient(180deg, #4831d4 85%, hsla(0deg, 0%, 100%, 0));
+  background: linear-gradient(180deg, #5444c1 85%, hsla(0deg, 0%, 100%, 0));
 }
 .header nav img {
   position: absolute;
@@ -69,12 +69,12 @@
   transition: all 0.25s ease-in-out;
 }
 .header .navMenu hr {
-  background-color: #4831d4;
-  border-color: #4831d4;
+  background-color: #5444c1;
+  border-color: #5444c1;
 }
 .header .navMenu span,
 .header .navMenu a {
-  color: #4831d4;
+  color: #5444c1;
 }
 .header .navMenu .spanMenu .spanLink {
   transform: none;

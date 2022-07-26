@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: #4831d4;
+  background-color: #5444c1;
   height: 100vh;
 }
 .wrapper .successForm {
@@ -24,7 +24,7 @@
   transform: translate(-50%, 0);
   width: 300px;
   height: 60px;
-  background-color: #3d155f;
+  background-color: #4831d4;
   color: #ccf381;
   font-size: 1rem;
   font-weight: bold;
@@ -32,18 +32,10 @@
 }
 .wrapper .successForm .backToHome span {
   position: absolute;
-  left: 55%;
+  left: 50%;
   transform: translate(-50%, -50%);
   top: 50%;
   text-transform: uppercase;
-}
-.wrapper .successForm .backToHome .icon {
-  color: #ccf381;
-  font-size: 2rem;
-  position: absolute;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  top: 50%;
 }
 .wrapper .successForm .backToHome .btnDynamic {
   display: flex;
@@ -57,10 +49,7 @@
   z-index: 2;
   transition: all ease 0.5s;
   background-color: #ffffff;
-  color: #4831d4;
-}
-.wrapper .successForm .backToHome .btnDynamic .icon {
-  color: #4831d4;
+  color: #5444c1;
 }
 .wrapper .successForm a:hover .btnDynamic {
   transform: translateX(100%);
