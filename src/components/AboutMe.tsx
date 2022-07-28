@@ -35,6 +35,8 @@ function AboutMe() {
 					projects but it was time to introduce some mechanics to my projects and the first language I learned
 					was JavaScript. I made a little game with it. After JavaScript, came the powerful JavaScript
 					library, React. This is how I learned React and started my first project based on this technology.
+					After had created first project based on react I started learning Typescript and I have builded this
+					website.
 				</p>
 			</div>
 			<div className={`container skill ${classContainer}`}>
@@ -46,7 +48,7 @@ function AboutMe() {
 					<li>Ability to use the Git version control system</li>
 					<li>Ability to use Sass</li>
 					<li>Basic unit testing skills using the Jest framework and the Testing Library</li>
-					<li>Basic knowledge of TypeScript</li>
+					<li>Ability to use TypeScript</li>
 					<li>Basic knowledge of PHP and MySQL</li>
 					<li>Basic design skills in Adobe XD</li>
 				</ul>
