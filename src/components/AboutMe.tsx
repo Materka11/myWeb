@@ -34,9 +34,10 @@ function AboutMe() {
 					I started learning about the frontend from October 2017. Later I tested my knowledge on various
 					projects but it was time to introduce some mechanics to my projects and the first language I learned
 					was JavaScript. I made a little game with it. After JavaScript, came the powerful JavaScript
-					library, React. This is how I learned React and started my first project based on this technology.
-					After had created first project based on react I started learning Typescript and I have builded this
-					website.
+					library, React. This is how I learned React and started my first project based on this technology,
+					meanwhile I learned git and how to use Adobe XD. After had created first project based on React I
+					started learning Typescript and I have builded this website. Now I started project with React Three
+					Fiber to upgrade that page. For this project I had to learn the Blender.
 				</p>
 			</div>
 			<div className={`container skill ${classContainer}`}>
@@ -51,6 +52,8 @@ function AboutMe() {
 					<li>Ability to use TypeScript</li>
 					<li>Basic knowledge of PHP and MySQL</li>
 					<li>Basic design skills in Adobe XD</li>
+					<li>Basic design skills in Blender</li>
+					<li>Ability to use React Three Fiber</li>
 				</ul>
 			</div>
 			<img className="circle1" src={circles} alt="background element" />
