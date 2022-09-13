@@ -37,6 +37,5 @@
 	},
 	"devDependencies": {
 		"@types/react-router-dom": "^5.3.3"
-	},
-	"homepage": "https://materka11.github.io/myWeb/"
+	}
 }
