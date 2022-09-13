@@ -1,6 +1,6 @@
 # myWeb
 
-My own website 
+This is part of my website
 
 The Project was created: 
 - React - 18.2.0,
@@ -9,4 +9,4 @@ The Project was created:
 
 When creating this page, I was inspired by the appearance of these pages: https://olaolu.dev/ and https://robbowen.digital/
 
-Link to website: https://www.arkadiuszmaterka.pl/
+Link to website: https://benevolent-lamington-da0dc3.netlify.app/
