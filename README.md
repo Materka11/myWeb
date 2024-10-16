@@ -45,6 +45,3 @@ This will generate a production-ready build in the `build/` folder.
 + **React** for UI development.
 + **TypeScript** for static typing.
 + **SASS** for styling.
-
-## License
-This project is open-source and available under the MIT License.
