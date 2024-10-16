@@ -1,12 +1,50 @@
 # myWeb
+A React-based web project enhanced with modern tools and practices. This project is inspired by the designs from [olaolu.dev](https://olaolu.dev/) and [robbowen.digital](https://robbowen.digital/). 
 
-This is part of my website
+Explore the deployed version of the site here: [Live Demo](https://benevolent-lamington-da0dc3.netlify.app/).
 
-The Project was created: 
-- React - 18.2.0,
-- Typescript - 4.7.4,
-- Sass - 1.53.0;
+## Features
++ **React 18.2.0:** Fast, modular front-end development.
++ **TypeScript 4.7.4:** Adds static type checking for safer code.
++ **SASS 1.53.0:** Enables more powerful and maintainable styling.
 
-When creating this page, I was inspired by the appearance of these pages: https://olaolu.dev/ and https://robbowen.digital/
+## Project Structure
++ `public/:` Static files served by the app.
++ `src/:` Contains core components and logic.
 
-Link to website: https://benevolent-lamington-da0dc3.netlify.app/
+## Getting Started
+### Prerequisites
++ Node.js (v14+)
++ npm or yarn 
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/Materka11/myWeb.git
+
+# Navigate to the project directory
+cd myWeb
+
+# Install dependencies
+npm install
+
+```
+### Running the App
+```bash
+# Start the development server
+npm start
+```
+The app will be available at `http://localhost:3000`.
+### Build for Production
+```bash
+npm run build
+```
+This will generate a production-ready build in the `build/` folder.
+
+## Technologies Used
+
++ **React** for UI development.
++ **TypeScript** for static typing.
++ **SASS** for styling.
+
+## License
+This project is open-source and available under the MIT License.
